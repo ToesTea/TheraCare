@@ -1,13 +1,15 @@
 {
-  "name": " ",
+  "name": "SCD - Austria",
   "version": "0.0.1",
-  "description": "",
+  "description": "A simple web application to demonstrate the use of SCR in Austria.",
   "private": true,
   "keywords": [
-    ""
+    "web",
+    "application",
+    "austria"
   ],
   "license": "",
-  "author": "",
+  "author": "Adrian Schmoll",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --config webpack.config.dev.js",

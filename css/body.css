@@ -23,8 +23,9 @@
     --hover-sage-rgb: rgba(163, 177, 138, 1);
 }
 
-color {
-    var(--text-dark-gray);
+body {
+    background: var(--background-beige);
+    color: var(--text-dark-gray);
 }
 
 

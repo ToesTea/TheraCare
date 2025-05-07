@@ -1,13 +1,14 @@
 /*Bitte arbeitet mit Variablen für ein einheitliches design*/
 
 :root{
-    --nav-background: #fff; /*Placeholder*/
+    --nav-sky-blue: #a7d3f4;
 }
 
 /*Main Site*/
 
 .navbar{
-
+    background-color: var(--nav-sky-blue);
+    border-radius: 10px;
 }
 
 /*Sub Site n*/

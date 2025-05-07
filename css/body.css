@@ -3,8 +3,31 @@
 :root {
     --main-font: 'Montserrat', sans-serif;
     --main-font-size: 16px;
-    --main-color: #333; /*Placeholder*/
+
+    --text-dark-gray: #2e2e2e;
+    --buttons-mint: #a8d5ba;
+    --background-beige: #f5f1e3;
+    --light-gray: #d3d3d3;
+    --olive-green: #6b8e77;
+    --sand: #c5c1a0;
+    --headline-footer-forest: #587b6f;
+    --hover-sage: #a3b18a;
+
+    --text-dark-gray-rgb: rgba(46, 46, 46, 1);
+    --buttons-mint-rgb: rgba(168, 213, 186, 1);
+    --background-beige-rgb: rgba(245, 241, 227, 1);
+    --light-gray-rgb: rgba(211, 211, 211, 1);
+    --olive-green-rgb: rgba(107, 142, 119, 1);
+    --sand-rgb: rgba(197, 193, 160, 1);
+    --headline-footer-forest-rgb: rgba(88, 123, 111, 1);
+    --hover-sage-rgb: rgba(163, 177, 138, 1);
 }
+
+color {
+    var(--text-dark-gray);
+}
+
+
 
 /*Main Site*/
 

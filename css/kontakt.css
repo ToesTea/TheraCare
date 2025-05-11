@@ -1,8 +1,3 @@
-.content {
-    display: flex;
-    justify-content: center;
-}
-
 h1 {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -13,23 +8,21 @@ h1 {
     font-family: Verdana, sans-serif;
     background-color: #a8d5ba;
     color: #2e2e2e;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1vw auto;
     padding: 2vw;
     border-radius: 5vw;
-}
 
-a{
-    color: #587b6f;
-}
+    a{
+        color: #587b6f;
+    }
 
-a:hover{
-    color: #a7d3f4;
-    background-color: #2e2e2e;
-    padding: 3px;
-    border-radius: 3px;
+    a:hover{
+        color: #a7d3f4;
+        background-color: #2e2e2e;
+        padding: 3px;
+        border-radius: 3px;
+    }
+
 }
 
 #mailbutton {

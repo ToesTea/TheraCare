@@ -20,73 +20,95 @@
   <link rel="stylesheet" href="Site/css/style.css">
   <link rel="stylesheet" href="Site/css/skeleton.css">
 
-  <link rel="stylesheet" href="css/body.css">
-  <link rel="stylesheet" href="css/head.css">
-  <link rel="stylesheet" href="css/footer_new.css">
-
-  <link rel="stylesheet" href="css/layout.css" />
-  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <link rel="manifest" href="Site/site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <meta name="theme-color" content="#f5f1e3">
 </head>
 
 <body>
 
-  <script src="Site/js/app.js"></script>
+  <div class="navbar">
+    <a href="index.html" class="link">
+      Home
+      <div class="bar"></div>
+    </a>
+    <a href="#" class="link">
+      Events
+      <div class="bar"></div>
+    </a>
+    <a href="kontakt.html" class="link">
+      Kontakt
+      <div class="bar"></div>
+    </a>
+  </div>
 
 
 
-      <div id="scroll-animate">
-        <div id="scroll-animate-main">
-          <div class="wrapper-parallax">
+  <main class="content" role="main">
 
-            <section class="content">
-              <div class="container">
-                <p>Test</p>
-              </div>
-            </section>
+    <div class="container">
+      <div class="row" style="margin-bottom: 2rem">
+        <div class="grey" style="height: 200px">
+          Foto
+        </div>
+      </div>
 
-            <footer class="new-footer">
-              <div class="container">
-                <div class="footer-content">
-                  <div class="footer-section about">
-                    <h2>About Us</h2>
-                    <p>
-                      In this Website I want to express myself
-                      and my passion for Webdeveloping with
-                      also some information about me. :)
-                    </p>
-                  </div>
-                  <div class="footer-section links">
-                    <h2>Quick Links</h2>
-                    <ul>
-                      <li><a href="#">Home</a></li>
-                      <!--<li><a href="#">About</a></li>
-                      <li><a href="#">Services</a></li>
-                      <li><a href="#">Contact</a></li>-->
-                    </ul>
-                  </div>
-                  <div class="footer-section contact">
-                    <h2>Contact Us</h2>
-                    <p>
-                      Email:
-                      <a href="mailto:MyLinkzZ@gmail.com"
-                      >MyLinkzZ@gmail.com</a
-                      >
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </footer>
+      <div class="row" style="margin-bottom: 2rem">
+        <div class="two columns"><p></p></div>
+        <div class="eight columns">
+          <div class="grey" style="height: 100px">
+            Text: Vorstellung des Vereins
           </div>
         </div>
       </div>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script src="js/display.js"></script>
+      <div class="row" style="margin-bottom: 2rem">
+        <div class="six columns">
+          <div class="grey" style="height: 200px">
+            Image
+          </div>
+        </div>
+        <div class="one column"><p></p></div>
+        <div class="five columns">
+          <div class="grey" style="height: 200px">
+            Text
+          </div>
+        </div>
+      </div>
 
-</body>
+      <div class="row" style="margin-bottom: 2rem">
+        <div class="five columns">
+          <div class="grey" style="height: 200px">
+            Text
+          </div>
+        </div>
+        <div class="one column"><p></p></div>
+        <div class="six columns">
+          <div class="grey" style="height: 200px">
+            Image
+          </div>
+        </div>
+      </div>
 
+      <div class="row" style="margin-bottom: 2rem">
+        <div class="grey" style="height: 200px">
+          News
+        </div>
+      </div>
+    </div>
+
+    <!-- Filler Text for testing -->
+    <!--<div id="lorem"></div>-->
+  </main>
+
+  <footer class="fixed_footer">
+      <p>Footer</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+
+  </body>
 
 </html>

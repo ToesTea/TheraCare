@@ -2,9 +2,9 @@
     --main-font: 'Montserrat', sans-serif;
     --main-font-size: 16px;
 
-    --text-dark-gray: rgba(46, 46, 46, 0.43);
+    --text-dark-gray: rgba(46, 46, 46, 1);
     --background-mint: #a8d5ba;
-    --background-beige: rgb(224, 215, 200);
+    --background-beige: rgb(224, 215, 200, 1);
     --light-gray: #d3d3d3;
     --olive-green: #6b8e77;
     --sand: #c5c1a0;

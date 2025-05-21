@@ -25,6 +25,18 @@
 
     <link rel="manifest" href="Site/site.webmanifest">
     <meta name="theme-color" content="#f5f1e3">
+
+    <style>
+        h1 {
+            font-size: 3rem;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -56,49 +68,40 @@
         </a>
     </div>
 
+
     <main class="content container" role="main">
-        <!-- Title -->
-        <div class="row" style="margin-bottom: 2rem">
-            <div class="six columns grey" style="font-size: 1.5rem;">
-                Zukunft des Vereins
-            </div>
-        </div>
+        <section id="about">
+            <h1>Über uns</h1>
+            <p>Hier stehen grundlegende Infos über den Verein.</p>
+        </section>
 
-        <div class="row" style="margin-bottom: 2rem">
-            <div class="five columns grey" style="height: 300px">Bild(Quer)</div>
-            <div class="two columns grey" style="height: 300px; font-size: 1rem">Bild(Hoch)</div>
-            <div class="five columns grey" style="height: 300px">Bild(Quer)</div>
-        </div>
+        <section id="feedback">
+            <h2>Feedbackformular</h2>
+            <form action="mailto:deine.email@domain.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br>
+                <label for="message">Nachricht:</label>
+                <textarea id="message" name="message"></textarea><br>
+                <input type="submit" value="Senden">
+            </form>
+        </section>
 
-        <!-- Title -->
-        <div class="row" style="margin-bottom: 2rem">
-            <div class="six columns grey" style="font-size: 1.5rem;">
-                Zukunft des Vereins
-            </div>
-        </div>
+        <section id="people">
+            <h2>Personen</h2>
+            <ul>
+                <li><a href="#">Name 1</a></li>
+                <li><a href="#">Name 2</a></li>
+                <li><a href="#">Name 3</a></li>
+            </ul>
+        </section>
 
-        <div class="row" style="margin-bottom: 2rem">
-            <div class="five columns grey" style="height: 300px">Bild(Quer)</div>
-            <div class="two columns grey" style="height: 300px; font-size: 1rem">Bild(Hoch)</div>
-            <div class="five columns grey" style="height: 300px">Bild(Quer)</div>
-        </div>
-
-        <!-- Title -->
-        <div class="row" style="margin-bottom: 2rem">
-            <div class="six columns grey" style="font-size: 1.5rem;">
-                Zukunft des Vereins
-            </div>
-        </div>
-
-        <div class="row" style="margin-bottom: 2rem">
-            <div class="five columns grey" style="height: 300px">Bild(Quer)</div>
-            <div class="two columns grey" style="height: 300px; font-size: 1rem">Bild(Hoch)</div>
-            <div class="five columns grey" style="height: 300px">Bild(Quer)</div>
-        </div>
+        <section id="location">
+            <h2>Standort</h2>
+            <p>Phloxgasse 1A, Guntramsdorf</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2667.593107083255!2d16.30637357574478!3d48.04088495788866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476dae1f547bfc19%3A0x89c27bf47f92a1a8!2sPhloxgasse%201a%2C%202353%20Guntramsdorf!5e0!3m2!1sde!2sat!4v1747829614166!5m2!1sde!2sat" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
 
     </main>
-
-
 
     <footer class="fixed_footer">
         <div class="container">
@@ -128,8 +131,7 @@
         </div>
     </footer>
 
+
     <script src="js/app.js"></script>
-
 </body>
-
 </html>

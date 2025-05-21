@@ -8,11 +8,11 @@ body {
 /*========= NAVBAR =========*/
 .navbar{
     border-radius: 20px;
-    margin-left: auto;
+    margin: 1rem auto 0 auto;
+
     height: 3rem;
     width: 70%;
     opacity: 1;
-    margin-right: 10%;
     margin-top: 1rem;
     top: 1rem;
     position: sticky;

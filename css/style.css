@@ -53,7 +53,7 @@ body {
         }
     }
     &:hover {
-        background-color: var(--background-beige);
+        background-color: #a5b579;
     }
 }
 

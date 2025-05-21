@@ -1,0 +1,13 @@
+.row .img{
+    z-index: 5;
+    position: relative;
+    width: 25%;
+    height: fit-content;
+    min-height: 150px;
+}
+.row {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    
+}

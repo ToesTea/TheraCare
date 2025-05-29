@@ -56,7 +56,14 @@ body {
         background-color: #a5b579;
     }
 }
-
+@media only screen and (max-width: 1081px) {
+    .navbar{
+        font-size: 0.8vw !important;
+        margin-left:0px;
+        margin-right: 0px;
+        width:100vw;
+    }
+}
 /*======== ------- ==========*/
 
 #lorem {

@@ -259,6 +259,20 @@ body {
 
     body {
         padding-top: 50px;
+<<<<<<< HEAD
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar .link {
+        padding: 6px var(--spacing-md);
+        font-size: 14px;
+    }
+
+    .navbar .section-inner {
+        width: 180px;
+=======
+>>>>>>> c38472f0d6529f2a7e1df3195f8520dcf34d3f72
     }
 }
 
@@ -272,7 +286,14 @@ body {
         width: 180px;
     }
 }
-
+@media only screen and (max-width: 1081px) {
+    .navbar{
+        font-size: 0.8vw !important;
+        margin-left:0px;
+        margin-right: 0px;
+        width:100vw;
+    }
+}
 /*======== ------- ==========*/
 
 #lorem {

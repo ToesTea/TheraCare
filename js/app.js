@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet eum aspernatur quibusdam ad provident molestiae adipisci numquam vitae molestias quidem vero nostrum voluptates harum! Vero veniam adipisci minima corporis quidem sunt omnis illum similique consectetur enim atque autem distinctio quas deserunt ex amet itaque ipsa cumque sed asperiores doloremque aliquid praesentium nihil tenetur cum aliquam.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis ratione blanditiis vero rem cupiditate magni praesentium veniam quibusdam dicta recusandae? Fugit fuga debitis inventore possimus distinctio perferendis.</p>
     `;
+<<<<<<< HEAD
     document.getElementById('lorem').innerHTML = content;
 });
 
@@ -51,4 +52,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+<<<<<<< HEAD
+=======
+=======
+    if(document.getElementById("lorem")!=null){
+        document.getElementById('lorem').innerHTML = content;
+    }
+    
+>>>>>>> 96d2a7f009ac10cdd34ae475709c158999c8f8d8
+>>>>>>> c38472f0d6529f2a7e1df3195f8520dcf34d3f72
 });

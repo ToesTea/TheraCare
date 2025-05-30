@@ -17,9 +17,7 @@
   <link rel="apple-touch-icon" href="Site/icon.png">
 
   <link rel="stylesheet" href="Site/css/normalize.css">
-  <link rel="stylesheet" href="Site/css/style.css">
   <link rel="stylesheet" href="Site/css/skeleton.css">
-
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/style.css">
 
@@ -28,112 +26,136 @@
 </head>
 
 <body>
-
-  <div class="navbar">
-    <a href="index.html" class="link">
-      Home
-      <div class="bar"></div>
-    </a>
-    <a href="events.html" class="link">
-      Events
-      <div class="bar"></div>
-    </a>
-    <a href="gallery.html" class="link">
-      Gallery
-      <div class="bar"></div>
-    </a>
-    <a href="future.html" class="link">
-      Future
-      <div class="bar"></div>
-    </a>
-    <a href="about.html" class="link">
-      About
-      <div class="bar"></div>
-    </a>
-    <a href="kontakt.html" class="link">
-      Kontakt
-      <div class="bar"></div>
-    </a>
-  </div>
-
-
-
-  <main class="content container" role="main">
-      <!-- Foto -->
-      <div class="row" style="margin-bottom: 2rem">
-        <div class="twelve columns grey" style="height: 200px">
-          Foto
+    <nav class="navbar">
+        <button class="menu-toggle" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="section-inner">
+            <a href="index.html" class="link active">Home<span class="bar"></span></a>
+            <a href="events.html" class="link">Events<span class="bar"></span></a>
+            <a href="gallery.php" class="link">Gallery<span class="bar"></span></a>
+            <a href="future.html" class="link">Future<span class="bar"></span></a>
+            <a href="about.html" class="link">About<span class="bar"></span></a>
+            <a href="kontakt.html" class="link">Kontakt<span class="bar"></span></a>
         </div>
-      </div>
+    </nav>
 
-      <!-- Vereinsvorstellung -->
-      <div class="row" style="margin-bottom: 2rem">
-        <div class="two columns"><p></p></div>
-        <div class="eight columns grey" style="height: 100px">
-          Text: Vorstellung des Vereins
+    <div class="hero-background">
+        <img src="Site/gallery-images/slideshow/sans titre (33 sur 56).jpg" alt="SCD Austria Willkommen" class="hero-image">
+        <div class="hero-content">
+            <h1>Willkommen bei SCD Austria</h1>
+            <p>Ein Ort für persönliche Entwicklung, emotionale Unterstützung und gemeinsames Wachstum</p>
         </div>
-      </div>
+    </div>
 
-      <!-- Image Left, Text Right -->
-      <div class="row" style="margin-bottom: 2rem">
-        <div class="six columns grey" style="height: 200px">
-          Image
-        </div>
-        <div class="one column"><p></p></div>
-        <div class="five columns grey" style="height: 200px">
-          Text
-        </div>
-      </div>
+    <main class="content" role="main">
+      <!-- Intro Section with Grid Layout -->
+      <section class="home-intro">
+          <div class="intro-grid">
+              <div class="intro-text">
+                  <h2>Über uns</h2>
+                  <p>Wir sind eine Gemeinschaft, die sich der persönlichen Entwicklung und dem emotionalen Wohlbefinden widmet.</p>
+                  <a href="about.html" class="cta-button">Mehr erfahren</a>
+              </div>
+              <div class="intro-image">
+                  <img src="Site/gallery-images/slideshow/therapieBett - Kopie (4).jpeg" alt="Persönliche Entwicklung">
+              </div>
+          </div>
+      </section>
 
-      <!-- Text Left, Image Right -->
-      <div class="row" style="margin-bottom: 2rem">
-        <div class="five columns grey" style="height: 200px">
-          Text
-        </div>
-        <div class="one column"><p></p></div>
-        <div class="six columns grey" style="height: 200px">
-          Image
-        </div>
-      </div>
+      <!-- Features Section with Cards -->
+      <section class="home-features">
+          <div class="features-grid">
+              <div class="feature-card">
+                  <div class="feature-icon">🌱</div>
+                  <h3>Persönliche Entwicklung</h3>
+                  <p>Entdecken Sie Ihr volles Potenzial durch unsere vielfältigen Angebote zur persönlichen Weiterentwicklung.</p>
+              </div>
+              <div class="feature-card">
+                  <div class="feature-icon">👥</div>
+                  <h3>Unsere Gemeinschaft</h3>
+                  <p>Werden Sie Teil einer unterstützenden Gemeinschaft, die gemeinsam wächst und sich entwickelt.</p>
+              </div>
+              <div class="feature-card">
+                  <div class="feature-icon">📅</div>
+                  <h3>Veranstaltungen</h3>
+                  <p>Nehmen Sie an unseren regelmäßigen Workshops, Seminaren und Treffen teil.</p>
+              </div>
+          </div>
+      </section>
 
-      <!-- News -->
-      <div class="row" style="margin-bottom: 2rem">
-        <div class="twelve columns grey" style="height: 200px">
-          News
-        </div>
-      </div>
-  </main>
+      <!-- News and Events Split Section -->
+      <section class="home-news-events">
+          <div class="news-section">
+              <h2>Aktuelle News</h2>
+              <div class="news-list">
+                  <div class="news-item">
+                      <span class="news-date">15. Mai 2024</span>
+                      <h4>News Titel</h4>
+                      <p>Kurze Beschreibung der Neuigkeit...</p>
+                      <a href="#" class="read-more">Weiterlesen →</a>
+                  </div>
+                  <div class="news-item">
+                      <span class="news-date">10. Mai 2024</span>
+                      <h4>News Titel</h4>
+                      <p>Kurze Beschreibung der Neuigkeit...</p>
+                      <a href="#" class="read-more">Weiterlesen →</a>
+                  </div>
+              </div>
+          </div>
+      </section>
+    </main>
 
-
-  <footer class="fixed_footer">
-    <div class="container">
-      <div class="row">
-        <div class="six columns"  style="font-size: 0.9em">
-          <h5 style="color: white">Kontakt</h5>
-          <p>
-            SCD Austria<br>
-            1 A, Guntramsdorf<br>
-            E-Mail: <a href="mailto:info@scd-austria.com">info@scd-austria.com</a><br>
-            Telefon: +43 676 4989291
-          </p>
+  <footer class="footer">
+    <div class="section-inner">
+        <div class="row">
+            <div class="six columns footer-section">
+                <h5>Kontakt</h5>
+                <p>
+                    Phloxgasse 1A<br>
+                    2353 Guntramsdorf<br>
+                    <a href="mailto:info@scd-austria.com">info@scd-austria.com</a><br>
+                    +43 676 4989291
+                </p>
+            </div>
+            <div class="six columns footer-section">
+                <h5>Links</h5>
+                <ul class="footer-links">
+                    <li><a href="events.html">Veranstaltungen</a></li>
+                    <li><a href="gallery.php">Galerie</a></li>
+                    <li><a href="datenschutz.html">Datenschutz</a></li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/scd.austria/" target="_blank">
+                        <img src="Site/img/img.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="six columns">
-          <h5 style="color: white">Folge uns</h5>
-          <p>
-            <a href="https://www.instagram.com/scd.austria/">
-              <img src="Site/img/img.png" alt="Instagram" style="height: 2em; width: 2em; filter: invert(100%)">
-            </a>
-            <a href="datenschutz.html">
-              <br>Datenschutzhinweis
-            </a>
-          </p>
-        <p style="font-size: 0.7em">&copy; <script>document.write(new Date().getFullYear());</script> SCD Austria. Alle Rechte vorbehalten.</p>
+        <div class="footer-bottom">
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> SCD Austria. Alle Rechte vorbehalten.</p>
         </div>
-      </div>
     </div>
   </footer>
 
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navbar = document.querySelector('.navbar');
+      const body = document.body;
+
+      menuToggle.addEventListener('click', function() {
+          menuToggle.classList.toggle('active');
+          navbar.classList.toggle('active');
+          body.classList.toggle('menu-open');
+      });
+  });
+  </script>
+
   <script src="js/app.js"></script>
+  <script src="js/navbar.js"></script>
 
   </body>
 

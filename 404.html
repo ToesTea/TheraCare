@@ -13,12 +13,12 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #f5f7fa 0%, #a5b579 100%);
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #2c3e50;
+            color: #2b4c3b;
             overflow: hidden;
             position: relative;
         }
@@ -54,23 +54,23 @@
         h1 {
             font-size: 120px;
             margin-bottom: 20px;
-            background: linear-gradient(45deg, #2E7D32, #4CAF50, #81C784);
+            background: linear-gradient(45deg, #2b4c3b, #a5b579, #8a9862);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 2px 2px 20px rgba(76, 175, 80, 0.2);
+            text-shadow: 2px 2px 20px rgba(165, 181, 121, 0.2);
             animation: colorShift 8s linear infinite;
         }
 
         @keyframes colorShift{
-            0% { filter: hue-rotate(60deg); }
-            100% { filter: hue-rotate(120deg); }
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
         }
 
         h2 {
             font-size: 24px;
             margin-bottom: 20px;
-            color: #34495e;
+            color: #2b4c3b;
             text-transform: uppercase;
             letter-spacing: 2px;
             position: relative;
@@ -84,13 +84,13 @@
             transform: translateX(-50%);
             width: 50px;
             height: 2px;
-            background: linear-gradient(90deg, transparent, #3498db, transparent);
+            background: linear-gradient(90deg, transparent, #a5b579, transparent);
         }
 
         p {
             font-size: 18px;
             margin-bottom: 30px;
-            color: #7f8c8d;
+            color: #333333;
             line-height: 1.6;
             text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
         }
@@ -98,7 +98,7 @@
         .btn {
             display: inline-block;
             padding: 15px 30px;
-            background: linear-gradient(45deg, #2c3e50, #3498db);
+            background: linear-gradient(45deg, #2b4c3b, #a5b579);
             color: white;
             text-decoration: none;
             border-radius: 25px;
@@ -169,5 +169,37 @@
         <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
         <a href="../index.html" class="btn">Home</a>
     </div>
+
+    <footer class="footer">
+        <div class="section-inner">
+            <div class="row">
+                <div class="six columns footer-section">
+                    <h5>Kontakt</h5>
+                    <p>
+                        Phloxgasse 1A<br>
+                        2353 Guntramsdorf<br>
+                        <a href="mailto:info@scd-austria.com">info@scd-austria.com</a><br>
+                        +43 676 4989291
+                    </p>
+                </div>
+                <div class="six columns footer-section">
+                    <h5>Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="events.html">Veranstaltungen</a></li>
+                        <li><a href="gallery.php">Galerie</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/scd.austria/" target="_blank">
+                            <img src="Site/img/img.png" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <script>document.write(new Date().getFullYear());</script> SCD Austria. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

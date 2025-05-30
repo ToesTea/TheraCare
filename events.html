@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SCD-Austria</title>
+    <title>SCD-Austria - Events</title>
     <meta name="description" content="Ein Ort für persönliche Entwicklung, emotionale Unterstützung und gemeinsames Wachstum">
-    <meta property="og:title" content="SCD Austria">
+    <meta property="og:title" content="SCD Austria - Events">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.scd-austria.com/">
     <meta property="og:image" content="https://i.postimg.cc/tgP1kDRW/hereinspaziert-traumf-nger.jpg">
@@ -17,9 +17,7 @@
     <link rel="apple-touch-icon" href="Site/icon.png">
 
     <link rel="stylesheet" href="Site/css/normalize.css">
-    <link rel="stylesheet" href="Site/css/style.css">
     <link rel="stylesheet" href="Site/css/skeleton.css">
-
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -28,125 +26,140 @@
 </head>
 
 <body>
+    <nav class="navbar">
+        <button class="menu-toggle" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="section-inner">
+            <a href="index.html" class="link">Home<span class="bar"></span></a>
+            <a href="events.html" class="link active">Events<span class="bar"></span></a>
+            <a href="gallery.php" class="link">Gallery<span class="bar"></span></a>
+            <a href="future.html" class="link">Future<span class="bar"></span></a>
+            <a href="about.html" class="link">About<span class="bar"></span></a>
+            <a href="kontakt.html" class="link">Kontakt<span class="bar"></span></a>
+        </div>
+    </nav>
 
-    <div class="navbar">
-        <a href="index.html" class="link">
-            Home
-            <div class="bar"></div>
-        </a>
-        <a href="events.html" class="link">
-            Events
-            <div class="bar"></div>
-        </a>
-        <a href="gallery.html" class="link">
-            Gallery
-            <div class="bar"></div>
-        </a>
-        <a href="future.html" class="link">
-            Future
-            <div class="bar"></div>
-        </a>
-        <a href="about.html" class="link">
-            About
-            <div class="bar"></div>
-        </a>
-        <a href="kontakt.html" class="link">
-            Kontakt
-            <div class="bar"></div>
-        </a>
+    <div class="hero-background">
+        <img src="Site/gallery-images/slideshow/sans titre (33 sur 56).jpg" alt="Events Hero" class="hero-image">
+        <div class="hero-content">
+            <h1>Unsere Events</h1>
+            <p>Entdecken Sie unsere vielfältigen Veranstaltungen und werden Sie Teil unserer Gemeinschaft.</p>
+        </div>
     </div>
 
-
-
-    <main class="content container" role="main">
-        <!-- Headline -->
-        <div class="row" style="margin-bottom: 2rem">
-            <div class="twelve columns grey" style="height: 80px;">
-                ÜBERSCHRIFT
+    <main class="events-section" role="main">
+        <!-- Events Container -->
+        <div class="events-container">
+            <!-- Event Card 1 -->
+            <div class="event-card">
+                <img src="Site/gallery-images/slideshow/sans titre (33 sur 56).jpg" alt="Treffen im Verein" class="event-image">
+                <div class="event-content">
+                    <span class="event-date">28. Sep 2025</span>
+                    <h3 class="event-title">Treffen im Verein</h3>
+                    <p class="event-location">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+                        </svg>
+                        Phloxgasse 1A, 2353 Guntramsdorf
+                    </p>
+                    <p class="event-description">Wir treffen uns im Verein für eine kleine Besprechung</p>
+                    <div class="event-footer">
+                        <a href="#" class="event-button primary">Anmelden</a>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Table Section -->
-        <div class="row" style="margin-bottom: 2rem">
-            <div class="twelve columns grey" style="padding: 2rem;">
-                <table border="1" style="width: 100%; background-color: white;">
-                    <tr>
-                        <th>Name</th>
-                        <th>Termin</th>
-                        <th>Info</th>
-                    </tr>
-                    <tr>
-                        <td>Treffen im Verein</td>
-                        <td>28.09.2025</td>
-                        <td>Wir treffen uns im Verein für eine kleine Besprechung</td>
-                    </tr>
-                </table>
-                <p style="text-align: center; margin-top: 1rem;">
-                    Alternative Möglichkeit: Name, Termin, Info, Bild
-                </p>
+            <!-- Event Card 2 -->
+            <div class="event-card">
+                <img src="Site/gallery-images/slideshow/therapieBett - Kopie (4).jpeg" alt="Workshop: Persönliche Entwicklung" class="event-image">
+                <div class="event-content">
+                    <span class="event-date">15. Okt 2025</span>
+                    <h3 class="event-title">Workshop: Persönliche Entwicklung</h3>
+                    <p class="event-location">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+                        </svg>
+                        Online Event
+                    </p>
+                    <p class="event-description">Ein interaktiver Workshop zur Förderung der persönlichen Entwicklung.</p>
+                    <div class="event-footer">
+                        <a href="#" class="event-button primary">Anmelden</a>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Headline -->
-        <div class="row" style="margin-bottom: 2rem">
-            <div class="twelve columns grey" style="height: 80px;">
-                ÜBERSCHRIFT
-            </div>
-        </div>
-
-        <!-- Table Section -->
-        <div class="row" style="margin-bottom: 2rem">
-            <div class="twelve columns grey" style="padding: 2rem;">
-                <table border="1" style="width: 100%; background-color: white;">
-                    <tr>
-                        <th>Name</th>
-                        <th>Termin</th>
-                        <th>Info</th>
-                    </tr>
-                    <tr>
-                        <td>Treffen im Verein</td>
-                        <td>28.09.2025</td>
-                        <td>Wir treffen uns im Verein für eine kleine Besprechung</td>
-                    </tr>
-                </table>
-                <p style="text-align: center; margin-top: 1rem;">
-                    Alternative Möglichkeit: Name, Termin, Info, Bild
-                </p>
+            <!-- Event Card 3 -->
+            <div class="event-card">
+                <img src="Site/gallery-images/slideshow/wohnblick.jpeg" alt="Entspannungstechniken Workshop" class="event-image">
+                <div class="event-content">
+                    <span class="event-date">5. Nov 2025</span>
+                    <h3 class="event-title">Entspannungstechniken Workshop</h3>
+                    <p class="event-location">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+                        </svg>
+                        Phloxgasse 1A, 2353 Guntramsdorf
+                    </p>
+                    <p class="event-description">Lernen Sie verschiedene Entspannungstechniken kennen und wie Sie diese im Alltag anwenden können.</p>
+                    <div class="event-footer">
+                        <a href="#" class="event-button primary">Anmelden</a>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
-
-    <footer class="fixed_footer">
-        <div class="container">
+    <footer class="footer">
+        <div class="section-inner">
             <div class="row">
-                <div class="six columns"  style="font-size: 0.9em">
-                    <h5 style="color: white">Kontakt</h5>
+                <div class="six columns footer-section">
+                    <h5>Kontakt</h5>
                     <p>
-                        SCD Austria<br>
-                        1 A, Guntramsdorf<br>
-                        E-Mail: <a href="mailto:info@scd-austria.com">info@scd-austria.com</a><br>
-                        Telefon: +43 676 4989291
+                        Phloxgasse 1A<br>
+                        2353 Guntramsdorf<br>
+                        <a href="mailto:info@scd-austria.com">info@scd-austria.com</a><br>
+                        +43 676 4989291
                     </p>
                 </div>
-                <div class="six columns">
-                    <h5 style="color: white">Folge uns</h5>
-                    <p style="margin-bottom: 1px;">
-                        <a href="https://www.instagram.com/scd.austria/">
-                            <img src="Site/img/img.png" alt="Instagram" style="height: 2em; width: 2em; filter: invert(100%)">
+                <div class="six columns footer-section">
+                    <h5>Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="events.html">Veranstaltungen</a></li>
+                        <li><a href="gallery.php">Galerie</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/scd.austria/" target="_blank">
+                            <img src="Site/img/img.png" alt="Instagram">
                         </a>
-                        <a href="datenschutz.html">
-                            <br>Datenschutzhinweis
-                        </a>
-                    </p>
-                    <p style="font-size: 0.7em">&copy; <script>document.write(new Date().getFullYear());</script> SCD Austria. Alle Rechte vorbehalten.</p>
+                    </div>
                 </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <script>document.write(new Date().getFullYear());</script> SCD Austria. Alle Rechte vorbehalten.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/app.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navbar = document.querySelector('.navbar');
+        const body = document.body;
 
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            navbar.classList.toggle('active');
+            body.classList.toggle('menu-open');
+        });
+    });
+    </script>
+
+    <script src="js/app.js"></script>
+    <script src="js/navbar.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,29 @@
+<?php
+require_once 'includes/gallery_functions.php';
+
+// Directories containing the gallery images
+$slideshowDir = 'Site/gallery-images/slideshow/';
+$fixedDir = 'Site/gallery-images/fixed/';
+$slideshowDir2 = 'Site/gallery-images/slideshow2/';
+$fixedDir2 = 'Site/gallery-images/fixed2/';
+
+// Get all image files from both directories
+$slideshowImages = getImagesFromDirectory($slideshowDir);
+$fixedImages = getImagesFromDirectory($fixedDir);
+$slideshowImages2 = getImagesFromDirectory($slideshowDir2);
+$fixedImages2 = getImagesFromDirectory($fixedDir2);
+
+// Add a test message
+echo "<!-- PHP is working! Time: " . date('Y-m-d H:i:s') . " -->";
+?>
 <!doctype html>
 <html class="no-js" lang="">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Über uns - SCD-Austria</title>
-    <meta name="description" content="Lernen Sie SCD Austria kennen - unsere Geschichte, Mission und Team">
+    <title>SCD-Austria - Gallery</title>
+    <meta name="description" content="Ein Ort für persönliche Entwicklung, emotionale Unterstützung und gemeinsames Wachstum">
     <meta property="og:title" content="SCD Austria">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.scd-austria.com/">
@@ -20,6 +38,8 @@
     <link rel="stylesheet" href="Site/css/skeleton.css">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/gallery.css">
 
     <link rel="manifest" href="Site/site.webmanifest">
     <meta name="theme-color" content="#f5f1e3">
@@ -27,7 +47,7 @@
 
 <body>
     <nav class="navbar">
-        <button class="menu-toggle">
+        <button class="menu-toggle" type="button">
             <span></span>
             <span></span>
             <span></span>
@@ -35,73 +55,44 @@
         <div class="section-inner">
             <a href="index.html" class="link">Home<span class="bar"></span></a>
             <a href="events.html" class="link">Events<span class="bar"></span></a>
-            <a href="gallery.php" class="link">Gallery<span class="bar"></span></a>
+            <a href="gallery.php" class="link active">Gallery<span class="bar"></span></a>
             <a href="future.html" class="link">Future<span class="bar"></span></a>
-            <a href="about.html" class="link active">About<span class="bar"></span></a>
+            <a href="about.html" class="link">About<span class="bar"></span></a>
             <a href="kontakt.html" class="link">Kontakt<span class="bar"></span></a>
         </div>
     </nav>
 
     <div class="hero-background">
-        <img src="Site/gallery-images/slideshow2/sans titre (26 sur 56) - Kopie (3).jpg" alt="Über SCD Austria" class="hero-image">
+        <img src="Site/gallery-images/slideshow/sans titre (33 sur 56).jpg" alt="Galerie Hero" class="hero-image">
         <div class="hero-content">
-            <h1>Über uns</h1>
-            <p>Lernen Sie uns und unsere Vision kennen</p>
+            <h1>Unsere Galerie</h1>
+            <p>Entdecken Sie Eindrücke und Momente aus unseren Veranstaltungen und Aktivitäten.</p>
         </div>
     </div>
 
-    <main class="content" role="main">
-        <section class="about-intro">
-            <div class="content-box">
-                <h2>Unsere Geschichte</h2>
-                <p>SCD Austria wurde mit der Vision gegründet, einen Ort für persönliches Wachstum und gegenseitige Unterstützung zu schaffen.</p>
-            </div>
-        </section>
+    <main class="content container" role="main">
+        <!-- First Gallery Section -->
+        <div class="gallery-old-section">
+            <?php
+            renderSlideshow($slideshowImages, "gallery-old-slide", "gallery-old-dot", "", "Unsere Highlights");
+            renderGallery($fixedImages, "Bildergalerie");
+            ?>
+        </div>
 
-        <section class="team-section">
-            <h2>Unser Team</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="image-box">
-                        <img src="Site/gallery-images/slideshow2/sans titre (26 sur 56) - Kopie (4).jpg" alt="Teammitglied 1" class="team-image">
-                    </div>
-                    <h3>Anna Müller</h3>
-                    <p class="role">Gründerin & Leiterin</p>
-                    <p>Mit jahrelanger Erfahrung in der persönlichen Entwicklung leitet Anna unsere Gemeinschaft.</p>
-                </div>
+        <!-- Section Divider -->
+        <div class="gallery-old-divider"></div>
 
-                <div class="team-member">
-                    <div class="image-box">
-                        <img src="Site/gallery-images/slideshow/sans titre (26 sur 56) - Kopie (2).jpg" alt="Teammitglied 2" class="team-image">
-                    </div>
-                    <h3>Michael Weber</h3>
-                    <p class="role">Therapeut</p>
-                    <p>Michael bringt seine Expertise in verschiedenen therapeutischen Ansätzen ein.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="location-section">
-            <div class="content-box">
-                <h2>Unser Standort</h2>
-                <div class="map-container">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2660.0876811669397!2d16.31624037685778!3d48.0550069713075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476da95d52b6153d%3A0x3a8c1c1d3df3f96!2sPhloxgasse%201A%2C%202353%20Guntramsdorf!5e0!3m2!1sde!2sat!4v1699568944359!5m2!1sde!2sat" 
-                        width="100%" 
-                        height="450" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-                <p>Besuchen Sie uns in der Phloxgasse 1A, 2353 Guntramsdorf</p>
-            </div>
-        </section>
+        <!-- Second Gallery Section -->
+        <div class="gallery-old-section">
+            <?php
+            renderSlideshow($slideshowImages2, "gallery-old-slide2", "gallery-old-dot2", "2", "Weitere Eindrücke");
+            renderGallery($fixedImages2, "Weitere Bilder");
+            ?>
+        </div>
     </main>
 
     <footer class="footer">
-        <div class="section-inner">
+        <div class="container">
             <div class="row">
                 <div class="six columns footer-section">
                     <h5>Kontakt</h5>
@@ -148,6 +139,6 @@
 
     <script src="js/app.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/gallery.js"></script>
 </body>
-
-</html>
+</html> 

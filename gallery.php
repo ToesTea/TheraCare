@@ -123,20 +123,6 @@ echo "<!-- PHP is working! Time: " . date('Y-m-d H:i:s') . " -->";
         </div>
     </footer>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navbar = document.querySelector('.navbar');
-        const body = document.body;
-
-        menuToggle.addEventListener('click', function() {
-            menuToggle.classList.toggle('active');
-            navbar.classList.toggle('active');
-            body.classList.toggle('menu-open');
-        });
-    });
-    </script>
-
     <script src="js/app.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/gallery.js"></script>

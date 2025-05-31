@@ -2,116 +2,137 @@
 require_once 'includes/gallery_functions.php';
 ?>
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="de">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SCD-Austria</title>
-  <meta name="description" content="Ein Ort für persönliche Entwicklung, emotionale Unterstützung und gemeinsames Wachstum">
-  <meta property="og:title" content="SCD Austria">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.scd-austria.com/">
-  <meta property="og:image" content="https://i.postimg.cc/tgP1kDRW/hereinspaziert-traumf-nger.jpg">
-  <meta property="og:image:alt" content="Welcome to SCD Austria">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCD-Austria</title>
+    <meta name="description" content="Ein Ort für persönliche Entwicklung, emotionale Unterstützung und gemeinsames Wachstum">
+    <meta property="og:title" content="SCD Austria">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.scd-austria.com/">
+    <meta property="og:image" content="https://i.postimg.cc/tgP1kDRW/hereinspaziert-traumf-nger.jpg">
+    <meta property="og:image:alt" content="Welcome to SCD Austria">
 
-  <link rel="icon" href="Site/favicon.ico" sizes="any">
-  <link rel="icon" href="Site/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="Site/icon.png">
+    <link rel="icon" href="Site/favicon.ico" sizes="any">
+    <link rel="icon" href="Site/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="Site/icon.png">
 
-  <link rel="stylesheet" href="Site/css/normalize.css">
-  <link rel="stylesheet" href="Site/css/skeleton.css">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="Site/css/normalize.css">
+    <link rel="stylesheet" href="Site/css/skeleton.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
 
-  <link rel="manifest" href="Site/site.webmanifest">
-  <meta name="theme-color" content="#f5f1e3">
+    <link rel="manifest" href="Site/site.webmanifest">
+    <meta name="theme-color" content="#f5f1e3">
+
+    <!-- js-yaml (für das Parsen von texts.yaml) -->
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml/dist/js-yaml.min.js"></script>
 </head>
 
 <body>
-    <nav class="navbar">
-        <button class="menu-toggle" type="button">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div class="section-inner">
-            <a href="index.html" class="link active">Home<span class="bar"></span></a>
-            <a href="events.html" class="link">Events<span class="bar"></span></a>
-            <a href="gallery.php" class="link">Gallery<span class="bar"></span></a>
-            <a href="future.html" class="link">Future<span class="bar"></span></a>
-            <a href="about.html" class="link">About<span class="bar"></span></a>
-            <a href="kontakt.html" class="link">Kontakt<span class="bar"></span></a>
-        </div>
-    </nav>
-
-    <div class="hero-background">
-        <img src="Site/gallery-images/hero.jpeg" alt="SCD Austria Hero" class="hero-image">
-        <div class="hero-content">
-            <h1>Willkommen bei SCD Austria</h1>
-            <p>Ein Ort für persönliche Entwicklung, emotionale Unterstützung und gemeinsames Wachstum</p>
-        </div>
+<nav class="navbar">
+    <button class="menu-toggle" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="section-inner">
+        <a href="index.html" class="link active">Home<span class="bar"></span></a>
+        <a href="events.html" class="link">Events<span class="bar"></span></a>
+        <a href="gallery.php" class="link">Gallery<span class="bar"></span></a>
+        <a href="future.html" class="link">Future<span class="bar"></span></a>
+        <a href="about.html" class="link">About<span class="bar"></span></a>
+        <a href="kontakt.html" class="link">Kontakt<span class="bar"></span></a>
     </div>
+</nav>
 
-    <main class="content" role="main">
-      <!-- Intro Section with Grid Layout -->
-      <section class="home-intro">
-          <div class="intro-grid">
-              <div class="intro-text">
-                  <h2>Über uns</h2>
-                  <p>Wir sind eine Gemeinschaft, die sich der persönlichen Entwicklung und dem emotionalen Wohlbefinden widmet.</p>
-                  <a href="about.html" class="cta-button">Mehr erfahren</a>
-              </div>
-              <div class="intro-image">
-                  <img src="Site/gallery-images/hero.jpeg" alt="Persönliche Entwicklung">
-              </div>
-          </div>
-      </section>
+<div class="hero-background">
+    <img src="Site/gallery-images/hero.jpeg" alt="SCD Austria Hero" class="hero-image">
+    <div class="hero-content">
+        <h1>Willkommen bei SCD Austria</h1>
+        <p>Ein Ort für persönliche Entwicklung, emotionale Unterstützung und gemeinsames Wachstum</p>
+    </div>
+</div>
 
-      <!-- Features Section with Cards -->
-      <section class="home-features">
-          <div class="features-grid">
-              <div class="feature-card">
-                  <div class="feature-icon">🌱</div>
-                  <h3>Persönliche Entwicklung</h3>
-                  <p>Entdecken Sie Ihr volles Potenzial durch unsere vielfältigen Angebote zur persönlichen Weiterentwicklung.</p>
-              </div>
-              <div class="feature-card">
-                  <div class="feature-icon">👥</div>
-                  <h3>Unsere Gemeinschaft</h3>
-                  <p>Werden Sie Teil einer unterstützenden Gemeinschaft, die gemeinsam wächst und sich entwickelt.</p>
-              </div>
-              <div class="feature-card">
-                  <div class="feature-icon">📅</div>
-                  <h3>Veranstaltungen</h3>
-                  <p>Nehmen Sie an unseren regelmäßigen Workshops, Seminaren und Treffen teil.</p>
-              </div>
-          </div>
-      </section>
+<main class="content" role="main">
+    <!-- Intro Section with Grid Layout -->
+    <section class="home-intro">
+        <div class="intro-grid">
+            <div class="intro-text">
+                <h2>Über uns</h2>
+                <p>Wir sind eine Gemeinschaft, die sich der persönlichen Entwicklung und dem emotionalen Wohlbefinden widmet.</p>
+                <a href="about.html" class="cta-button">Mehr erfahren</a>
+            </div>
+            <div class="intro-image">
+                <img src="Site/gallery-images/hero.jpeg" alt="Persönliche Entwicklung">
+            </div>
+        </div>
+    </section>
 
-      <!-- News and Events Split Section -->
-      <section class="home-news-events">
-          <div class="news-section">
-              <h2>Aktuelle News</h2>
-              <div class="news-list">
-                  <div class="news-item">
-                      <span class="news-date">15. März 2024</span>
-                      <h4>Neue Veranstaltungen für 2024</h4>
-                      <p>Ein spannendes Jahr voller Möglichkeiten zur persönlichen Entwicklung liegt vor uns. Wir haben ein vielfältiges Programm zusammengestellt...</p>
-                      <a href="news.html#news1" class="read-more">Weiterlesen</a>
-                  </div>
-                  <div class="news-item">
-                      <span class="news-date">1. März 2024</span>
-                      <h4>Erfolgreicher Abschluss unseres Winterretreats</h4>
-                      <p>Ein intensives Wochenende voller Inspiration, Austausch und persönlichem Wachstum liegt hinter uns...</p>
-                      <a href="news.html#news2" class="read-more">Weiterlesen</a>
-                  </div>
-              </div>
-          </div>
-      </section>
-    </main>
+    <!-- ===== HIER FÜGEN WIR DEN YAML-BEREICH (Home-Texte) EIN ===== -->
+    <section style="margin-top: 2rem;">
+        <div class="grey">
+            <!-- Sprachwahl -->
+            <label for="lang-select" style="font-weight:500; margin-right:0.5rem;">
+                Sprache / Мова:
+            </label>
+            <select id="lang-select" style="padding:0.25rem 0.5rem; font-size:1rem; border-radius:4px; border:1px solid #ccc;">
+                <option value="de">Deutsch</option>
+                <option value="ua">Українська</option>
+            </select>
 
-  <footer class="footer">
+            <!-- Container, in den die Home-Texte (id=1) aus texts.yaml geschrieben werden -->
+            <div id="home-container" style="margin-top:1rem;"></div>
+        </div>
+    </section>
+    <!-- ===== ENDE YAML-BEREICH ===== -->
+
+    <!-- Features Section with Cards -->
+    <section class="home-features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🌱</div>
+                <h3>Persönliche Entwicklung</h3>
+                <p>Entdecken Sie Ihr volles Potenzial durch unsere vielfältigen Angebote zur persönlichen Weiterentwicklung.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>Unsere Gemeinschaft</h3>
+                <p>Werden Sie Teil einer unterstützenden Gemeinschaft, die gemeinsam wächst und sich entwickelt.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h3>Veranstaltungen</h3>
+                <p>Nehmen Sie an unseren regelmäßigen Workshops, Seminaren und Treffen teil.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- News and Events Split Section -->
+    <section class="home-news-events">
+        <div class="news-section">
+            <h2>Aktuelle News</h2>
+            <div class="news-list">
+                <div class="news-item">
+                    <span class="news-date">15. Mai 2024</span>
+                    <h4>News Titel</h4>
+                    <p>Kurze Beschreibung der Neuigkeit...</p>
+                    <a href="news.html" class="read-more">Weiterlesen</a>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">10. Mai 2024</span>
+                    <h4>News Titel</h4>
+                    <p>Kurze Beschreibung der Neuigkeit...</p>
+                    <a href="news.html" class="read-more">Weiterlesen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
     <div class="section-inner">
         <div class="row">
             <div class="six columns footer-section">
@@ -147,11 +168,11 @@ require_once 'includes/gallery_functions.php';
             <p>&copy; <script>document.write(new Date().getFullYear());</script> SCD Austria. Alle Rechte vorbehalten.</p>
         </div>
     </div>
-  </footer>
+</footer>
 
-  <script src="js/app.js"></script>
-  <script src="js/navbar.js"></script>
-
-  </body>
+<script src="js/app.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/yaml.js"></script>
+</body>
 
 </html>

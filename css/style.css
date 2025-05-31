@@ -1798,8 +1798,8 @@ main > div:first-child {
 
 .event-footer {
     margin-top: auto;
-    padding: 0 var(--spacing-lg) var(--spacing-lg);
     text-align: center;
+    width: 100%;
 }
 
 .event-button {
@@ -1813,12 +1813,14 @@ main > div:first-child {
     transition: all var(--transition-base);
     min-width: 160px;
     text-align: center;
+    margin: 0 auto;
 }
 
 .event-button:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
     box-shadow: var(--shadow-sm);
+    color: var(--text-light);
 }
 
 .event-button.secondary {

@@ -102,7 +102,7 @@ require_once 'includes/gallery_functions.php';
                 </div>
             </section>
 
-            <section class="contact-form">
+            <section class="contact-form" id="anmeldeformular">
                 <h2 style="margin-top: 1em;">Kontaktformular</h2>
                 <form action="mailto:info@scd-austria.com" method="POST" enctype="text/plain">
                     <div class="form-group">
@@ -114,6 +114,10 @@ require_once 'includes/gallery_functions.php';
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
+                        <label for="subject">Betreff <span class="required">*</span></label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
                         <label for="message">Nachricht <span class="required">*</span></label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
@@ -121,6 +125,10 @@ require_once 'includes/gallery_functions.php';
                         Nachricht senden
                         <span class="button-icon">→</span>
                     </button>
+                    <p style="font-size: 0.8em; margin-top: 1em;">
+                        Wenn Sie auf Senden klicken, werden Sie zu Ihrem E-Mail-Programm weitergeleitet. Von dort aus können Sie die Nachricht an uns senden. 
+                        Wir freuen uns schon darauf!
+                    </p>
                 </form>
             </section>
         </div>

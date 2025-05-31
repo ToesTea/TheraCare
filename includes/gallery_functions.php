@@ -77,7 +77,7 @@ function renderSlideshow($images, $slideClass = "gallery-old-slide", $dotClass =
         
         // Render slides
         foreach($images as $index => $image) {
-            echo '<div class="' . $slideClass . ' fade">';
+            echo '<div class="' . $slideClass . '">';
             echo '<img src="' . $image . '" alt="Slideshow Image">';
             echo '</div>';
         }
@@ -120,8 +120,10 @@ function getGalleryFolders() {
     // Get all gallery folders
     $galleryFolders = array_filter(glob($baseDir . '*'), 'is_dir');
     
-    // Sort folders in reverse order (newest first)
-    rsort($galleryFolders);
+    // Sort folders by creation time, oldest first
+    usort($galleryFolders, function($a, $b) {
+        return filemtime($a) - filemtime($b);
+    });
     
     foreach ($galleryFolders as $folder) {
         $folderName = basename($folder);
@@ -151,7 +153,8 @@ function getGalleryFolders() {
             $galleries[$folderName] = [
                 'name' => ucwords(str_replace('-', ' ', $folderName)),
                 'slideshow' => $slideshowImages,
-                'fixed' => $fixedImages
+                'fixed' => $fixedImages,
+                'created' => filemtime($folder)
             ];
         }
     }
@@ -187,6 +190,11 @@ function renderDynamicGalleries() {
         echo '<p class="no-galleries">Keine Galerien gefunden.</p>';
         return;
     }
+    
+    // Sortiere die Galerien nach Erstellungsdatum, älteste zuerst
+    uasort($galleries, function($a, $b) {
+        return $a['created'] - $b['created'];
+    });
     
     foreach ($galleries as $folderName => $gallery) {
         echo '<div class="gallery-section" id="gallery-' . htmlspecialchars($folderName) . '">';

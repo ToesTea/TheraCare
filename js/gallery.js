@@ -10,10 +10,36 @@ document.addEventListener('DOMContentLoaded', function() {
         const slides = slideshow.querySelectorAll('.gallery-old-slide, .gallery-old-slide2');
         if (!slides.length) return;
 
+        // Erstelle Dots Container
+        const dotsContainer = document.createElement('div');
+        dotsContainer.className = 'gallery-old-dots';
+        slideshow.after(dotsContainer);
+
+        // Erstelle Dots für jedes Slide
+        slides.forEach((_, index) => {
+            const dot = document.createElement('span');
+            dot.className = 'gallery-old-dot';
+            if (index === 0) dot.classList.add('active');
+            dot.onclick = () => showSlide(slideshow, index);
+            dotsContainer.appendChild(dot);
+        });
+
         // Verstecke alle Slides außer dem ersten
         slides.forEach((slide, index) => {
             slide.style.display = index === 0 ? "block" : "none";
         });
+
+        // Funktion zum Anzeigen eines Slides
+        function showSlide(slideshow, index) {
+            const slides = slideshow.querySelectorAll('.gallery-old-slide, .gallery-old-slide2');
+            const dots = dotsContainer.querySelectorAll('.gallery-old-dot');
+            
+            slides.forEach(slide => slide.style.display = "none");
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].style.display = "block";
+            dots[index].classList.add('active');
+        }
 
         // Setup Navigation
         const prev = slideshow.querySelector('.gallery-old-prev');
@@ -24,15 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const currentSlide = slideshow.querySelector('.gallery-old-slide[style*="block"], .gallery-old-slide2[style*="block"]');
                 const allSlides = Array.from(slides);
                 let currentIndex = allSlides.indexOf(currentSlide);
-                
-                // Verstecke aktuelles Slide
-                currentSlide.style.display = "none";
-                
-                // Berechne vorheriges Slide
-                currentIndex = currentIndex <= 0 ? allSlides.length - 1 : currentIndex - 1;
-                
-                // Zeige vorheriges Slide
-                allSlides[currentIndex].style.display = "block";
+                const newIndex = currentIndex <= 0 ? allSlides.length - 1 : currentIndex - 1;
+                showSlide(slideshow, newIndex);
             };
         }
 
@@ -41,15 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const currentSlide = slideshow.querySelector('.gallery-old-slide[style*="block"], .gallery-old-slide2[style*="block"]');
                 const allSlides = Array.from(slides);
                 let currentIndex = allSlides.indexOf(currentSlide);
-                
-                // Verstecke aktuelles Slide
-                currentSlide.style.display = "none";
-                
-                // Berechne nächstes Slide
-                currentIndex = currentIndex >= allSlides.length - 1 ? 0 : currentIndex + 1;
-                
-                // Zeige nächstes Slide
-                allSlides[currentIndex].style.display = "block";
+                const newIndex = currentIndex >= allSlides.length - 1 ? 0 : currentIndex + 1;
+                showSlide(slideshow, newIndex);
             };
         }
 
@@ -58,15 +70,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const currentSlide = slideshow.querySelector('.gallery-old-slide[style*="block"], .gallery-old-slide2[style*="block"]');
             const allSlides = Array.from(slides);
             let currentIndex = allSlides.indexOf(currentSlide);
-            
-            // Verstecke aktuelles Slide
-            currentSlide.style.display = "none";
-            
-            // Berechne nächstes Slide
-            currentIndex = currentIndex >= allSlides.length - 1 ? 0 : currentIndex + 1;
-            
-            // Zeige nächstes Slide
-            allSlides[currentIndex].style.display = "block";
+            const newIndex = currentIndex >= allSlides.length - 1 ? 0 : currentIndex + 1;
+            showSlide(slideshow, newIndex);
         }, 5000);
     });
 });

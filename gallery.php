@@ -1,20 +1,5 @@
 <?php
 require_once 'includes/gallery_functions.php';
-
-// Directories containing the gallery images
-$slideshowDir = 'Site/gallery-images/slideshow/';
-$fixedDir = 'Site/gallery-images/fixed/';
-$slideshowDir2 = 'Site/gallery-images/slideshow2/';
-$fixedDir2 = 'Site/gallery-images/fixed2/';
-
-// Get all image files from both directories
-$slideshowImages = getImagesFromDirectory($slideshowDir);
-$fixedImages = getImagesFromDirectory($fixedDir);
-$slideshowImages2 = getImagesFromDirectory($slideshowDir2);
-$fixedImages2 = getImagesFromDirectory($fixedDir2);
-
-// Add a test message
-echo "<!-- PHP is working! Time: " . date('Y-m-d H:i:s') . " -->";
 ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -38,7 +23,6 @@ echo "<!-- PHP is working! Time: " . date('Y-m-d H:i:s') . " -->";
     <link rel="stylesheet" href="Site/css/skeleton.css">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/gallery.css">
 
     <link rel="manifest" href="Site/site.webmanifest">
@@ -63,7 +47,7 @@ echo "<!-- PHP is working! Time: " . date('Y-m-d H:i:s') . " -->";
     </nav>
 
     <div class="hero-background">
-        <img src="Site/gallery-images/slideshow/sans titre (33 sur 56).jpg" alt="Galerie Hero" class="hero-image">
+        <img src="<?php echo getRandomHeroImage(); ?>" alt="Galerie Hero" class="hero-image">
         <div class="hero-content">
             <h1>Unsere Galerie</h1>
             <p>Entdecken Sie Eindrücke und Momente aus unseren Veranstaltungen und Aktivitäten.</p>
@@ -71,24 +55,10 @@ echo "<!-- PHP is working! Time: " . date('Y-m-d H:i:s') . " -->";
     </div>
 
     <main class="content container" role="main">
-        <!-- First Gallery Section -->
-        <div class="gallery-old-section">
-            <?php
-            renderSlideshow($slideshowImages, "gallery-old-slide", "gallery-old-dot", "", "Unsere Highlights");
-            renderGallery($fixedImages, "Bildergalerie");
-            ?>
-        </div>
-
-        <!-- Section Divider -->
-        <div class="gallery-old-divider"></div>
-
-        <!-- Second Gallery Section -->
-        <div class="gallery-old-section">
-            <?php
-            renderSlideshow($slideshowImages2, "gallery-old-slide2", "gallery-old-dot2", "2", "Weitere Eindrücke");
-            renderGallery($fixedImages2, "Weitere Bilder");
-            ?>
-        </div>
+        <?php
+        // Render all galleries
+        renderDynamicGalleries();
+        ?>
     </main>
 
     <footer class="footer">

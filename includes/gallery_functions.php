@@ -2,7 +2,10 @@
 if (!function_exists('getImagesFromDirectory')) {
     // Function to get images from a directory
     function getImagesFromDirectory($directory) {
-        return glob($directory . "*.{jpg,jpeg,png,gif}", GLOB_BRACE);
+        $images = glob($directory . "*.{jpg,jpeg,png,gif}", GLOB_BRACE);
+        // Sort images by name
+        sort($images);
+        return $images;
     }
 }
 
@@ -68,39 +71,39 @@ if (!function_exists('get_gallery_images')) {
 }
 
 // Function to render slideshow
-function renderSlideshow($images, $slideClass = "gallery-old-slide", $dotClass = "gallery-old-dot", $slideIndex = "", $title = "") {
+function renderSlideshow($images, $slideClass = "gallery-old-slide", $dotClass = "gallery-old-dot", $slideIndex = "") {
     if ($images) {
-        if ($title) {
-            echo '<h2 class="gallery-old-title">' . htmlspecialchars($title) . '</h2>';
-        }
         echo '<div class="gallery-old-slideshow' . ($slideIndex ? ' slideshow' . $slideIndex : '') . '">';
+        
+        // Render slides
         foreach($images as $index => $image) {
             echo '<div class="' . $slideClass . ' fade">';
             echo '<img src="' . $image . '" alt="Slideshow Image">';
             echo '</div>';
         }
+        
+        // Navigation arrows
         echo '<a class="gallery-old-prev" onclick="plusSlides(-1, \'' . $slideIndex . '\')">&#10094;</a>';
         echo '<a class="gallery-old-next" onclick="plusSlides(1, \'' . $slideIndex . '\')">&#10095;</a>';
-        echo '</div>';
-
+        
+        // Dots container
         echo '<div class="gallery-old-dots">';
         foreach($images as $index => $image) {
             echo '<span class="' . $dotClass . '" onclick="currentSlide(' . ($index + 1) . ', \'' . $slideIndex . '\')"></span>';
         }
         echo '</div>';
+        
+        echo '</div>';
     }
 }
 
 // Function to render fixed gallery
-function renderGallery($images, $title = "") {
+function renderGallery($images) {
     if ($images) {
-        if ($title) {
-            echo '<h3 class="gallery-old-title">' . htmlspecialchars($title) . '</h3>';
-        }
-        echo '<div class="gallery-old-container">';
+        echo '<div class="gallery-grid">';
         foreach($images as $image) {
-            echo '<div class="gallery-old-item">';
-            echo '<img src="' . $image . '" alt="Gallery Image" loading="lazy">';
+            echo '<div class="gallery-item">';
+            echo '<img src="' . $image . '" alt="Gallery Image" loading="lazy" onclick="openModal(this.src)">';
             echo '</div>';
         }
         echo '</div>';
@@ -108,4 +111,143 @@ function renderGallery($images, $title = "") {
         echo '<p>Keine Bilder gefunden.</p>';
     }
 }
+
+// Function to get all galleries from filesystem
+function getGalleryFolders() {
+    $baseDir = 'Site/gallery-images/';
+    $galleries = [];
+    
+    // Get all gallery folders
+    $galleryFolders = array_filter(glob($baseDir . '*'), 'is_dir');
+    
+    // Sort folders in reverse order (newest first)
+    rsort($galleryFolders);
+    
+    foreach ($galleryFolders as $folder) {
+        $folderName = basename($folder);
+        
+        // Skip special folders
+        if ($folderName === 'slideshow' || $folderName === 'fixed') {
+            continue;
+        }
+        
+        // Get slideshow and fixed images
+        $slideshowDir = $folder . '/slideshow/';
+        $fixedDir = $folder . '/fixed/';
+        
+        // Create directories if they don't exist
+        if (!file_exists($slideshowDir)) {
+            mkdir($slideshowDir, 0777, true);
+        }
+        if (!file_exists($fixedDir)) {
+            mkdir($fixedDir, 0777, true);
+        }
+        
+        $slideshowImages = getImagesFromDirectory($slideshowDir);
+        $fixedImages = getImagesFromDirectory($fixedDir);
+        
+        // Only add gallery if it has any images
+        if (!empty($slideshowImages) || !empty($fixedImages)) {
+            $galleries[$folderName] = [
+                'name' => ucwords(str_replace('-', ' ', $folderName)),
+                'slideshow' => $slideshowImages,
+                'fixed' => $fixedImages
+            ];
+        }
+    }
+    
+    return $galleries;
+}
+
+// Function to create a new gallery folder
+function createGalleryFolder($folderName) {
+    $baseDir = 'Site/gallery-images/';
+    $folderPath = $baseDir . sanitizeFolderName($folderName);
+    
+    if (!file_exists($folderPath)) {
+        return mkdir($folderPath, 0777, true);
+    }
+    return false;
+}
+
+// Function to sanitize folder names
+function sanitizeFolderName($name) {
+    // Remove special characters and convert spaces to dashes
+    $name = preg_replace('/[^a-zA-Z0-9\s-]/', '', $name);
+    $name = strtolower(trim($name));
+    $name = preg_replace('/[\s-]+/', '-', $name);
+    return $name;
+}
+
+// Function to render dynamic galleries
+function renderDynamicGalleries() {
+    $galleries = getGalleryFolders();
+    
+    if (empty($galleries)) {
+        echo '<p class="no-galleries">Keine Galerien gefunden.</p>';
+        return;
+    }
+    
+    foreach ($galleries as $folderName => $gallery) {
+        echo '<div class="gallery-section" id="gallery-' . htmlspecialchars($folderName) . '">';
+        echo '<h2 class="gallery-title">' . htmlspecialchars($gallery['name']) . '</h2>';
+        
+        // Render slideshow if there are slideshow images
+        if (!empty($gallery['slideshow'])) {
+            renderSlideshow($gallery['slideshow'], "gallery-old-slide", "gallery-old-dot", "");
+        }
+        
+        // Render fixed gallery if there are fixed images
+        if (!empty($gallery['fixed'])) {
+            echo '<div class="fixed-gallery-container">';
+            renderGallery($gallery['fixed']);
+            echo '</div>';
+        }
+        
+        echo '</div>';
+    }
+}
+
+// Function to handle new gallery creation form
+function renderGalleryCreationForm() {
+    echo '<div class="create-gallery-section">';
+    echo '<h2>Neue Galerie erstellen</h2>';
+    echo '<form action="create_gallery.php" method="post" class="create-gallery-form">';
+    echo '<div class="form-group">';
+    echo '<label for="gallery-name">Galerie Name:</label>';
+    echo '<input type="text" id="gallery-name" name="gallery-name" required>';
+    echo '</div>';
+    echo '<button type="submit" class="create-gallery-button">Galerie erstellen</button>';
+    echo '</form>';
+    echo '</div>';
+}
+
+// Function to get a random slideshow image for hero section
+function getRandomHeroImage() {
+    $baseDir = 'Site/gallery-images/';
+    $galleries = array_filter(glob($baseDir . '*'), 'is_dir');
+    $allSlideshowImages = [];
+    
+    foreach ($galleries as $gallery) {
+        $slideshowDir = $gallery . '/slideshow/';
+        if (file_exists($slideshowDir)) {
+            $images = getImagesFromDirectory($slideshowDir);
+            $allSlideshowImages = array_merge($allSlideshowImages, $images);
+        }
+    }
+    
+    if (!empty($allSlideshowImages)) {
+        return $allSlideshowImages[array_rand($allSlideshowImages)];
+    }
+    
+    // Fallback image if no slideshow images found
+    return 'Site/gallery-images/hero.jpg';
+}
+
+// Add modal for image viewing
+echo '<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>';
 ?> 
+

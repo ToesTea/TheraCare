@@ -25,7 +25,7 @@ sections:
 
         Вже понад 7 років ми супроводжуємо людей на шляху до кращого самопочуття, внутрішньої рівноваги та усвідомленого життя в єдності з природою. Наша мета — щоб кожна людина почувалася краще фізично й емоційно.
 
-        Ми віримо, що справжня турбота починається з малого: чашки трав’яного чаю, тепла трав’яної фіто бочки, щирої розмови чи аромату польових квітів. З таких моментів народжується відчуття цілісності.
+        Ми віримо, що справжня турбота починається з малого: чашки трав'яного чаю, тепла трав'яної фіто бочки, щирої розмови чи аромату польових квітів. З таких моментів народжується відчуття цілісності.
 
         Ми не лікуємо — ми супроводжуємо. Ми не обіцяємо чудес — ми створюємо простір для природного
         відновлення.
@@ -59,13 +59,13 @@ sections:
         Wir sind da. Wir glauben an das Leben, an die Kraft des Menschen und die Wärme der
         Gemeinschaft.
       ua: |
-        Понад 7 років ми з любов’ю й відданістю працюємо над тим, щоб люди почувалися краще фізично, емоційно й духовно.
+        Понад 7 років ми з любов'ю й відданістю працюємо над тим, щоб люди почувалися краще фізично, емоційно й духовно.
 
         Наша подорож почалася з напрямку «культурний туризм»: ми організовували групові поїздки до західних регіонів України — місць, що колись належали до Австро-Угорської імперії.
 
         Ці подорожі були більше, ніж екскурсії — це були зустрічі з природою, історією, місцевою культурою та чудовими людьми.
 
-        Ми віримо — як тоді, так і тепер — що подорожі зцілюють, об’єднують і допомагають пізнати себе по-новому.
+        Ми віримо — як тоді, так і тепер — що подорожі зцілюють, об'єднують і допомагають пізнати себе по-новому.
 
         Попри складні часи для всієї Європи — від локдаунів до війни в Україні — ми не полишили свого шляху.
 
@@ -123,7 +123,7 @@ sections:
   - id: 2.4
     title:
       de: "+ Verein (Statuten, Anmeldeformular (Download))"
-      ua: "+ Об’єднання (Статут, форма для реєстрації (завантажити))"
+      ua: "+ Об'єднання (Статут, форма для реєстрації (завантажити))"
     content:
       de: |
         + Spenden & Unterstützung
@@ -131,14 +131,14 @@ sections:
         Ohne Sponsoren und ehrenamtliche Mitarbeiter wäre unsere Arbeit nicht möglich. Möchten
         auch Sie unsere Arbeit unterstützen?
 
-        Spenden, Sponsoring & Dauerauftrag
+        Spenden, Sponsoring & Dauerauftrag
 
         Regelmäßige Spenden, auch wenn es nur kleine Beträge sind, helfen am meisten!
 
-        Mitglied werden & ehrenamtliche Mitarbeit
+        Mitglied werden & ehrenamtliche Mitarbeit
 
         Alle Mitglieder und alle Freiwilligen arbeiten auf ehrenamtlicher Basis! Einen Mitgliedsantrag
-        finden Sie unten zum Downloaden, bitte per Post oder E-Mail senden.
+        finden Sie unten zum Downloaden, bitte per Post oder E-Mail senden.
 
         Treten Sie mit uns in Kontakt! Das würde uns sehr freuen!
 
@@ -152,7 +152,7 @@ sections:
 
         Стати членом або волонтером: Усі наші члени й добровольці працюють на волонтерських засадах! Заявку на вступ можна завантажити нижче та надіслати поштою або електронною поштою.
 
-        Без волонтерів та спонсорів наша діяльність була б неможливою. Бажаєте підтримати нашу роботу? Ми будемо щиро вдячні! У вас є кілька можливостей це зробити. Зв’яжіться з нами:
+        Без волонтерів та спонсорів наша діяльність була б неможливою. Бажаєте підтримати нашу роботу? Ми будемо щиро вдячні! У вас є кілька можливостей це зробити. Зв'яжіться з нами:
 
         Наш рахунок для пожертв: SCD …
         IBAN:
@@ -225,16 +225,16 @@ sections:
         UA:
         Усі відвідувачі повинні поводитися з повагою та уважністю один до одного.
         Необхідно дотримуватись інструкцій персоналу.
-        Перебувати в організації у стані алкогольного або наркотичного сп’яніння заборонено.
+        Перебувати в організації у стані алкогольного або наркотичного сп'яніння заборонено.
         До майна організації слід ставитися дбайливо та з повагою.
 
         2. Вимоги до гігієни
 
         UA:
         Кожен учасник приносить із собою власні рушники, простирадло та кімнатне взуття.
-        За бажанням можна отримати простирадло (3 євро) та рушник (2 євро) за фіксовану пожертву.
-        Перед участю обов’язково дотримуватись особистої гігієни.
-        Кожен учасник зобов’язаний заздалегідь повідомити персонал про загальний стан здоров’я та можливі інфекційні захворювання.
+        За бажанням можна отримати простирадло (3 євро) та рушник (2 євро) за фіксовану пожертву.
+        Перед участю обов'язково дотримуватись особистої гігієни.
+        Кожен учасник зобов'язаний заздалегідь повідомити персонал про загальний стан здоров'я та можливі інфекційні захворювання.
 
         3. Участь та енергетичний добробут
 
@@ -278,285 +278,126 @@ sections:
       ua: ""
   - id: 3
     title:
-      de: "Weg zur Gesundheit"
-      ua: ""
-    content:
-      de: |
-        + Phyto–Fass +foto Video
-
-        Die Geschichte des Phyto-Fasses
-        Von alten Traditionen zum modernen Wohlgefühl…(mehr)
-
-        Das Phyto-Fass ist die moderne Verkörperung einer uralten Heilmethode – Dampfbäder mit Heilkräutern.
-        Ihre Wurzeln reichen Jahrhunderte zurück. In Tibet, der Mongolei und China nutzte man ähnliche Anwendungen, die in der Volksmedizin als „Kräuterdampfbad“ bekannt waren.
-
-        Im 20. Jahrhundert entstand daraus ein neues Format – ein kompaktes Holzfass mit einer Öffnung für den Kopf, in das Dampf aus einem Sud heilender Pflanzen geleitet wird.
-        Diese einfache, aber durchdachte Konstruktion macht es möglich, die Kraft der Natur überall zu nutzen – zu Hause, in kleinen Salons oder sogar unterwegs, wie dies viele Sportler tun.
-
-        Wer hätte gedacht, dass ein schlichtes Holzfass mit einer Kopfaussparung zum modernen Trend für Regeneration und Schönheit werden würde?
-        Und doch begann alles vor vielen Jahrhunderten...
-
-        In den Bergdörfern Tibets und der Mongolei behandelten Mönche ihre Patient*innen mit Kräuterdampf. Die Kranken wurden in Fässer gesetzt, mit einem heißen Aufguss übergossen – und der aufsteigende Dampf wirkte über Haut und Atemwege. Die Idee war klar: Schwitzen entgiftet, der Dampf stärkt Körper und Geist mit der Kraft der Natur.
-
-        Auch in Osteuropa war die Verwendung des Fasses weit verbreitet – zur Entspannung der Muskeln nach schwerer Arbeit oder als Vorbeugung gegen Erkältungen.
-        Im Laufe der Zeit entwickelte sich daraus das Phyto-Fass: handlich, mobil und vor allem – hochwirksam.
-
-        HINWEISE ZUR VERWENDUNG UND ZU KONTRAINDIKATIONEN
-        Das Phytofass ist ideal für Menschen mit Unverträglichkeit gegen hohe Temperaturen, die in einer Sauna entstehen, es bewirkt bei körperlichen und seelischen Problemen Linderung…(mehr)
-
-        verminderte Immunität,
-        neuroseähnliche Zustände, Stress, Depression, Schlafstörungen,
-        Müdigkeit, Mattigkeit, körperliche und emotionale Erschöpfung,
-        Erkrankungen des Herz-Kreislaufsystems
-        chronische Erkrankungen des Bronchopulmonalsystems,
-        chronische Hautkrankheiten (Psoriasis, Neurodermitis)
-        ölige, trockene Haut (Peeling der Haut), Akne,
-        Übergewicht, Cellulite
-        Nieren-, Harnwegs - und Genitalkrankheiten; bei Männern – Prostatitis, Blasenentzündung, Impotenz,
-        Gelenkschmerzen, Muskel-Skelett-System,
-        Rheuma, Arthritis und Polyarthritis Osteochondrose der Wirbelsäule Folgen nach Verletzungen, Frakturen;
-        "körperliche Verjüngung" des Körpers,
-        Verbesserung des Aussehens (Haut, Augen, Haare) Alterungsprozesse verlangsamen,
-        Erhaltung der allgemeinen Gesundheit;
-        Entfernung von Toxinen, Salzen, Radionukliden;
-        Aktivierung von Regenerationsprozessen
-        Normalisierung des Körpers und Unterstützung der Immunität
-
-        Bei einigen Krankheitsbildern ist jedoch eine Anwendung nicht zu empfehlen. (mehr)
-        Infektionskrankheiten, einschließlich Tuberkulose,
-        Geschlechts- und Pilzkrankheiten, einschließlich AIDS.
-        Onkologische Erkrankungen.
-        Herz-Kreislauf-Insuffizienz (Grad III). Hypertonie III Grad.
-        Chronische Krankheiten in der Zeit der Exazerbation.
-        Thrombophlebitis in der Zeit der Verschlimmerung.
-        Schwangerschaft und Stillzeit.
-        Vorhandensein von Steinen im Nieren-/Gallengang (größer als 4 mm).
-        Hautkrankheiten (eitrige Prozesse, offene Wunden, Verbrennungen, Schnittverletzungen).
-        Alkoholvergiftung
-
-        PHYTO-FASS-SITZUNG
-        1. Schritt: Blutdruckmessung - Wiegen des Kunden …(mehr)
-
-        2. Schritt: Schwitzen im Phytofass mit einer Mischung von mehr als 30 Kräutern. Die Sitzung dauert 10 - 25 Minuten bei einer Temperatur von 30° bis 45° C, individuell an die Gesundheit jedes Kunden angepasst.
-
-        3. Schritt: „Thermococon": Um eine maximale heilende Wirkung zu erreichen, wird der Kunde 15 Minuten lang in einen Thermococon gewickelt, in dem die Wärmeregulierung des Körpers stattfindet.
-
-        4. Schritt: Anschließend einreiben mit spezieller Kräuterlotion und ca. 10 min rasten.
-
-        5. Schritt: Blutdruck und Gewicht messen.
-
-        6. Schritt: Abschließend wird eine Portion Phyto-Tee gereicht.
-
-        EMPFEHLUNGEN:
-        Vor der Sitzung müssen Sie duschen. Es wird empfohlen, nach dem Ende der Sitzung für 2 Stunden nicht zu duschen. Außerdem muss jede*r Kunde*in ein eigenes Laken, 3 kleine Handtücher (zum Sitzen und für den Boden im Fass) und 1 großes Handtuch mitbringen. Für ein optimales Ergebnis sind ca. 10-15 Phyto-Fass-Sitzungen erforderlich.
-
-        Dies ist eine wohltuende Anwendung mit dampfenden Kräuterauszügen, die Entspannung und innere Ruhe fördert.
-
-        Unsere Varianten:
-        – mit Lavendel und Minze für innere Ruhe
-        – mit Rosmarin und Eukalyptus für mehr Energie
-        – mit Schafgarbe und Linde für freie Atmung
-        – mit Kiefernzweigen für tiefe Entspannung
-
-        + Teezeremonien & Volkswissen in Harmonie (nach Großmutters Rezepten)
-
-        Unsere Tees sind Heimat in einer Tasse. Sie entstehen mit Liebe und Wissen, das über
-        Generationen weitergegeben wurde.
-
-        Beispiele:
-        – Beruhigungstee: Minze, Melisse, Hopfenblüten
-        – Energie-Tee: Hagebutte, Thymian, Ingwer
-        – Stressfrei-Tee: Johanniskraut, Kamille, Lavendel
-        – Reinigungstee: Ringelblume, Brennnessel
-
-        Unsere Teezeremonien sind Momente des Innehaltens – kombiniert mit Wärme, Aromen,
-        Gesprächen und dem natürlichen Rhythmus.
-        – Themenabende: „Tee & Stille“, „Kräutergeschichten“, „Atmen mit der Natur“
-        – Mit Kerzen, Düften, Kräutern – einfach sein im Jetzt
-
-        + Leben ohne Schmerzen
-
-        Zukünftige Projekte
-      ua: |
-        + Фітобочка
-
-        Історія фітобочки
-        Від давніх традицій — до сучасного відчуття благополуччя…
-
-        Фітобочка — це сучасне втілення давнього методу зцілення: парових ванн із лікувальними травами.
-        Її коріння сягає століть. У Тибеті, Монголії та Китаї подібні процедури застосовували в народній медицині під назвою «трав’яна парова ванна».
-
-        У XX столітті на основі цієї традиції з’явився новий формат — компактна дерев’яна бочка з отвором для голови, куди подається пар із відвару цілющих рослин.
-
-        Ця проста, але добре продумана конструкція дозволяє використовувати силу природи будь-де: вдома, у невеликих салонах або навіть у дорозі — так, як це роблять багато спортсменів.
-
-        Хто б міг подумати, що звичайна дерев’яна бочка з вирізом для голови стане сучасним трендом для відновлення та краси?
-
-        Але почалося все багато століть тому...
-
-        У гірських монастирях Тибету та Монголії ченці лікували хворих трав’яним паром: людей саджали у бочки, обливали гарячим настоєм — і пар, що здіймався, діяв через шкіру та дихальні шляхи.
-        Ідея була простою: піт виводить токсини, а пар зміцнює тіло й дух силою природи.
-
-        І в Східній Європі бочку активно використовували — для розслаблення м’язів після важкої праці чи як профілактику застуд.
-
-        З часом із цієї традиції виникла фітобочка: зручна, мобільна й — найголовніше — дуже ефективна.
-
-        Показання до застосування фітобочки
-
-        Фітобочка — ідеальний варіант для тих, кому протипоказана висока температура в традиційній сауні. Вона полегшує стан при багатьох фізичних та емоційних порушеннях:
-
-        • знижений імунітет
-        • неврозоподібні стани, стрес, депресія
-        • порушення сну, хронічна втома, виснаження
-        • захворювання серцево-судинної системи
-        • хронічні хвороби бронхів і легенів
-        • шкірні захворювання (псоріаз, нейродерміт)
-        • жирна, суха або проблемна шкіра (акне, лущення)
-        • целюліт, надмірна вага
-        • захворювання нирок, сечостатевої системи
-        • у чоловіків – простатит, цистит, імпотенція
-        • біль у суглобах, артрит, поліартрит, ревматизм
-        • захворювання опорно-рухового апарату
-        • остеохондроз хребта
-        • реабілітація після травм, переломів
-        • омолодження тіла, покращення вигляду шкіри, волосся, очей
-        • уповільнення старіння, загальне оздоровлення
-        • виведення токсинів, солей, радіонуклідів
-        • активація процесів регенерації
-        • зміцнення імунітету та нормалізація роботи організму
-
-        Протипоказання
-
-        У деяких випадках фітобочка не рекомендується:
-
-        • інфекційні захворювання (у т.ч. туберкульоз, ВІЛ/СНІД)
-        • венеричні та грибкові хвороби
-        • онкологічні захворювання
-        • серцева недостатність III ступеня
-        • гіпертонія III ступеня
-        • загострення хронічних захворювань
-        • тромбофлебіт у період загострення
-        • вагітність і період грудного вигодовування
-        • камені в нирках/жовчному міхурі (більше 4 мм)
-        • гнійні шкірні захворювання, відкриті рани, опіки
-        • алкогольне сп’яніння
-
-        + Чайні церемонії та народна мудрість у гармонії (за рецептами бабусі)
-
-        Наші чаї — це тепло дому в кожній чашці.
-        Вони створені з любов’ю та знанням, яке передавалося з покоління в покоління.
-
-        Приклади чайних зборів:
-        Чай для заспокоєння: м’ята, меліса, шишки хмелю
-        Чай для енергії: шипшина, чебрець, імбир
-        Чай без стресу: звіробій, ромашка, лаванда
-        Очищувальний чай: календула, кропива
-
-        Наші чайні церемонії — це моменти тиші, тепла, ароматів, щирих розмов і єднання з природним ритмом життя.
-        Тематичні вечори:
-        «Чай і тиша»
-        «Трав’яні історії»
-        «Дихання разом із природою»
-        Зі свічками, ароматами, травами — просто бути тут і зараз.
-
-        + Життя без болю
-
-        Проєкт в розробці
-  - id: 4
-    title:
-      de: "Körper – Geist – Balance"
-      ua: "Тіло – Розум – Баланс"
-    content:
-      de: |
-        Es gibt Momente im Leben, in denen man einfach nur gehört werden möchte – ohne Druck, ohne
-        Eile. In unserem Raum finden Körper, Geist und Seele ihren natürlichen Einklang.
-
-        + Cranio-Sacrale Begleitung +foto
-
-        Eine sanfte, tiefgehende Körperarbeit, die zur inneren Ruhe führt
-
-        • Tiefe Entspannung – für Menschen mit viel innerer Anspannung
-        • Emotionale Balance – wenn das seelische Gleichgewicht fehlt
-        • Regeneration – nach schwierigen Phasen, Verlust oder Erschöpfung
-
-        + Psychoemotionale Unterstützung
-        Einfach da sein
-
-        Wir hören zu, urteilen nicht, geben Raum.
-
-        • Ruhestand – neue Wege finden, die Freude machen
-        • Für ältere Menschen – stille Gesprächsrunden, Teerituale, achtsame Nähe
-        • In Krisenzeiten – da sein, zuhören, Halt geben, wenn etwas schwerfällt
-
-        + Begleitung im Alltag und auf Reisen +foto video
-
-        • bei Wegen zu Terminen oder Erledigungen
-        • auf kleinen Erholungsreisen und auch Urlauben
-        • wenn Sie nicht allein sein möchten, sondern Sicherheit und Gemeinschaft spüren wollen
-
-        + Weitere liebevolle Angebote
-
-        • Spaziergänge in der Natur – mit Gespräch oder in Stille
-        • Vertraute Zeit – mit Kerzenlicht, Tee und offenem Herzen
-        • Kleine Rituale des Trosts – Erinnerungsalben, Musikstunden, Briefwechsel der Zuversicht
-      ua: |
-        Є моменти в житті, коли хочеться, щоб тебе просто вислухали — без тиску, без поспіху.
-        У нашому просторі тіло, розум і душа знаходять свою природну гармонію.
-
-        + Краніосакральний супровід +фото
-
-        М’яка, глибока тілесна практика, яка веде до внутрішнього спокою
-
-        • Глибоке розслаблення — для людей з сильним внутрішнім напруженням
-        • Емоційна рівновага — коли порушений душевний баланс
-        • Відновлення — після складних періодів, втрат або виснаження
-
-        + Психоемоційна підтримка
-
-        Просто бути поруч
-
-        Ми слухаємо, не оцінюємо, даємо простір.
-
-        • Вихід на пенсію — пошук нових шляхів, які приносять радість
-        • Для людей поважного віку — тихі розмови, чайні ритуали, уважна присутність
-        • У кризові моменти — бути поруч, вислухати, підтримати, коли важко
-
-        + Супровід у повсякденному житті та в подорожах +фото відео
-
-        • супровід на прийом або у справах
-        • на невеликі оздоровчі поїздки чи відпустку
-        • коли не хочеться бути на самоті, а хочеться відчути безпеку та присутність іншої людини
-
-        + Інші турботливі пропозиції
-
-        • Прогулянки на природі — з розмовами або в тиші
-        • Довірливий час — при свічках, з чаєм і відкритим серцем
-        • Маленькі ритуали розради — альбоми спогадів, музичні години, листування надії
-  - id: 5
-    title:
-      de: "Veranstaltungen"
+      de: "Events"
       ua: "Події"
     content:
-      de: ""
-      ua: ""
-  - id: 6
+      de: |
+        Willkommen bei unseren Veranstaltungen! Hier finden Sie alle aktuellen Events und Workshops.
+        Entdecken Sie vielfältige Möglichkeiten, sich weiterzuentwickeln und Teil unserer Gemeinschaft zu werden.
+      ua: |
+        Ласкаво просимо до наших заходів! Тут ви знайдете всі поточні події та майстер-класи.
+        Відкрийте для себе різноманітні можливості для розвитку та станьте частиною нашої спільноти.
+
+  - id: 3.1
     title:
-      de: "Kontaktieren Sie uns"
-      ua: "Контактна інформація"
+      de: "Treffen im Verein"
+      ua: "Зустріч в організації"
     content:
       de: |
-        - Tel.Nr 1
-        - Tel. Nr 2
-        - E-mail
-        - Facebook
-        - Adresse
-        - Maps
-        - Kontaktformular?
+        Wir treffen uns im Verein für eine kleine Besprechung. Gemeinsam planen wir kommende Aktivitäten
+        und tauschen uns über aktuelle Entwicklungen aus. Ihre Ideen und Vorschläge sind herzlich willkommen!
       ua: |
-        - Тел. №1
-        - Тел. №2
-        - E-mail
-        - Facebook
-        - Адреса
-        - Maps
-        - Контактна форма?
+        Ми зустрічаємося в організації для невеликої наради. Разом плануємо майбутні заходи
+        та обговорюємо поточні події. Ваші ідеї та пропозиції вітаються!
+
+  - id: 3.2
+    title:
+      de: "Workshop: Persönliche Entwicklung"
+      ua: "Майстер-клас: Особистий розвиток"
+    content:
+      de: |
+        Ein interaktiver Online-Workshop zur Förderung der persönlichen Entwicklung. 
+        Lernen Sie praktische Techniken und Methoden kennen, die Ihnen helfen, 
+        Ihr volles Potenzial zu entfalten.
+      ua: |
+        Інтерактивний онлайн майстер-клас для сприяння особистому розвитку.
+        Дізнайтеся про практичні техніки та методи, які допоможуть вам
+        розкрити свій повний потенціал.
+
+  - id: 3.3
+    title:
+      de: "Entspannungstechniken Workshop"
+      ua: "Майстер-клас з технік релаксації"
+    content:
+      de: |
+        Lernen Sie verschiedene Entspannungstechniken kennen und wie Sie diese im Alltag anwenden können.
+        Der Workshop bietet praktische Übungen und Tipps für mehr Gelassenheit im täglichen Leben.
+      ua: |
+        Дізнайтеся про різні техніки релаксації та як їх застосовувати у повсякденному житті.
+        Майстер-клас пропонує практичні вправи та поради для більшого спокою в щоденному житті.
+  - id: 4
+    title:
+      de: "Vision 2025"
+      ua: "Бачення 2025"
+    content:
+      de: |
+        Wir entwickeln uns stetig weiter und haben große Pläne für die Zukunft.
+        Unsere Vision für 2025 ist es, noch mehr Menschen auf ihrem Weg zu innerem Wachstum
+        und Wohlbefinden zu begleiten.
+      ua: |
+        Ми постійно розвиваємося і маємо великі плани на майбутнє.
+        Наше бачення на 2025 рік — супроводжувати ще більше людей на шляху
+        до внутрішнього зростання та благополуччя.
+
+  - id: 4.1
+    title:
+      de: "Neues Zentrum"
+      ua: "Новий центр"
+    content:
+      de: |
+        Expansion unseres Zentrums für noch mehr Möglichkeiten zur persönlichen Entwicklung.
+        Wir planen neue Räumlichkeiten und erweiterte Angebote, um unseren Besuchern
+        noch bessere Möglichkeiten zur Entfaltung zu bieten.
+      ua: |
+        Розширення нашого центру для ще більших можливостей особистого розвитку.
+        Ми плануємо нові приміщення та розширені послуги, щоб надати нашим
+        відвідувачам ще кращі можливості для розвитку.
+
+  - id: 4.2
+    title:
+      de: "Neue Programme"
+      ua: "Нові програми"
+    content:
+      de: |
+        Entwicklung innovativer Programme für ganzheitliches Wachstum.
+        Wir arbeiten an neuen Konzepten, die Körper, Geist und Seele
+        in Einklang bringen und nachhaltige Veränderung ermöglichen.
+      ua: |
+        Розробка інноваційних програм для цілісного зростання.
+        Ми працюємо над новими концепціями, які гармонізують тіло,
+        розум і душу та уможливлюють стійкі зміни.
+  - id: 5
+    title:
+      de: "Kontakt"
+      ua: "Контакти"
+    content:
+      de: |
+        Sie haben Fragen oder wollen sich über unseren Verein erkundigen?
+        Wir freuen uns auf Ihre Nachricht!
+      ua: |
+        У вас є питання або ви хочете дізнатися більше про нашу організацію?
+        Ми будемо раді вашому повідомленню!
+
+  - id: 5.1
+    title:
+      de: "So erreichen Sie uns"
+      ua: "Як з нами зв'язатися"
+    content:
+      de: |
+        Hier finden Sie alle Möglichkeiten, mit uns in Kontakt zu treten.
+        Wählen Sie den für Sie bequemsten Weg.
+      ua: |
+        Тут ви знайдете всі способи зв'язатися з нами.
+        Оберіть найзручніший для вас спосіб.
+
+  - id: 5.2
+    title:
+      de: "Kontaktformular"
+      ua: "Контактна форма"
+    content:
+      de: |
+        Nutzen Sie unser Kontaktformular für Ihre Anfrage.
+        Wir werden uns schnellstmöglich bei Ihnen melden.
+      ua: |
+        Скористайтеся нашою контактною формою для вашого запиту.
+        Ми зв'яжемося з вами якнайшвидше.

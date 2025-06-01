@@ -78,6 +78,4 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // load default language on page load
     loadHomeText(langSelect.value);
-  });
-  
 });

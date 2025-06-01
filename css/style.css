@@ -2570,3 +2570,16 @@ main > div:first-child {
         padding: 1.5rem;
     }
 }
+
+.logo-link {
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.nav-logo {
+    height: calc(var(--nav-height) - 20px);
+    width: auto;
+    object-fit: contain;
+}

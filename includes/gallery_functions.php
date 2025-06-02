@@ -73,23 +73,28 @@ if (!function_exists('get_gallery_images')) {
 // Function to render slideshow
 function renderSlideshow($images, $slideClass = "gallery-old-slide", $dotClass = "gallery-old-dot", $slideIndex = "") {
     if ($images) {
-        echo '<div class="gallery-old-slideshow' . ($slideIndex ? ' slideshow' . $slideIndex : '') . '">';
+        echo '<div class="gallery-old-slideshow' . ($slideIndex ? ' slideshow' . $slideIndex : '') . '" role="region" aria-label="Bildergalerie Slideshow">';
         
         // Render slides
         foreach($images as $index => $image) {
+            // Get image name without path and extension for better alt text
+            $imgName = pathinfo($image, PATHINFO_FILENAME);
+            $altText = ucwords(str_replace(['-', '_'], ' ', $imgName));
+            
             echo '<div class="' . $slideClass . '">';
-            echo '<img src="' . $image . '" alt="Slideshow Image">';
+            echo '<img src="' . $image . '" alt="' . htmlspecialchars($altText) . '" loading="lazy" width="1000" height="600">';
             echo '</div>';
         }
         
-        // Navigation arrows
-        echo '<a class="gallery-old-prev" onclick="plusSlides(-1, \'' . $slideIndex . '\')">&#10094;</a>';
-        echo '<a class="gallery-old-next" onclick="plusSlides(1, \'' . $slideIndex . '\')">&#10095;</a>';
+        // Navigation arrows with ARIA labels
+        echo '<a class="gallery-old-prev" onclick="plusSlides(-1, \'' . $slideIndex . '\')" role="button" aria-label="Vorheriges Bild">&#10094;</a>';
+        echo '<a class="gallery-old-next" onclick="plusSlides(1, \'' . $slideIndex . '\')" role="button" aria-label="Nächstes Bild">&#10095;</a>';
         
-        // Dots container
-        echo '<div class="gallery-old-dots">';
+        // Dots container with ARIA labels
+        echo '<div class="gallery-old-dots" role="tablist">';
         foreach($images as $index => $image) {
-            echo '<span class="' . $dotClass . '" onclick="currentSlide(' . ($index + 1) . ', \'' . $slideIndex . '\')"></span>';
+            echo '<span class="' . $dotClass . '" onclick="currentSlide(' . ($index + 1) . ', \'' . $slideIndex . '\')" 
+                  role="tab" aria-label="Bild ' . ($index + 1) . ' anzeigen"></span>';
         }
         echo '</div>';
         
@@ -100,10 +105,19 @@ function renderSlideshow($images, $slideClass = "gallery-old-slide", $dotClass =
 // Function to render fixed gallery
 function renderGallery($images) {
     if ($images) {
-        echo '<div class="gallery-grid">';
+        echo '<div class="gallery-grid" role="region" aria-label="Bildergalerie Raster">';
         foreach($images as $image) {
+            // Get image name without path and extension for better alt text
+            $imgName = pathinfo($image, PATHINFO_FILENAME);
+            $altText = ucwords(str_replace(['-', '_'], ' ', $imgName));
+            
             echo '<div class="gallery-item">';
-            echo '<img src="' . $image . '" alt="Gallery Image" loading="lazy" onclick="openModal(this.src)">';
+            echo '<img src="' . $image . '" 
+                      alt="' . htmlspecialchars($altText) . '" 
+                      loading="lazy" 
+                      width="300" 
+                      height="200" 
+                      onclick="openModal(this.src)">';
             echo '</div>';
         }
         echo '</div>';
@@ -233,22 +247,20 @@ function renderGalleryCreationForm() {
 // Function to get a random slideshow image for hero section
 function getRandomHeroImage() {
     $baseDir = 'Site/gallery-images/';
-    $galleries = array_filter(glob($baseDir . '*'), 'is_dir');
-    $allSlideshowImages = [];
     
+    // Suche das spezifische Bild in allen Galerie-Ordnern
+    $galleries = getGalleryFolders();
     foreach ($galleries as $gallery) {
-        $slideshowDir = $gallery . '/slideshow/';
-        if (file_exists($slideshowDir)) {
-            $images = getImagesFromDirectory($slideshowDir);
-            $allSlideshowImages = array_merge($allSlideshowImages, $images);
+        if (!empty($gallery['slideshow'])) {
+            foreach ($gallery['slideshow'] as $image) {
+                if (strpos($image, 'DSC00246') !== false) {
+                    return $image;
+                }
+            }
         }
     }
     
-    if (!empty($allSlideshowImages)) {
-        return $allSlideshowImages[array_rand($allSlideshowImages)];
-    }
-    
-    // Fallback image if no slideshow images found
+    // Fallback image if the specific image is not found
     return 'Site/gallery-images/hero.jpg';
 }
 

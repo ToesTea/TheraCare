@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.scd-austria.com/sitemap.xml
+
+# Verhindern Sie das Crawling von nicht-öffentlichen Bereichen
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /config/
+Disallow: /temp/
+Disallow: /*.php$
+Allow: /gallery.php
+Allow: /index.php 

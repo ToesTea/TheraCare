@@ -2,18 +2,28 @@
 require_once 'includes/gallery_functions.php';
 ?>
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="de">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SCD-Austria - Gallery</title>
-    <meta name="description" content="Ein Ort für persönliche Entwicklung, emotionale Unterstützung und gemeinsames Wachstum">
-    <meta property="og:title" content="SCD Austria">
+    <title>Galerie - SCD Austria | Eindrucksvolle Momente & Veranstaltungen</title>
+    <meta name="description" content="Entdecken Sie unsere Galerie mit Eindrücken von Workshops, Events und Treffen bei SCD Austria. Erleben Sie die schönsten Momente unserer Gemeinschaft in Bildern.">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Galerie - SCD Austria | Eindrucksvolle Momente">
+    <meta property="og:description" content="Entdecken Sie unsere Bildergalerie mit den schönsten Momenten von SCD Austria Events, Workshops und Gemeinschaftstreffen.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.scd-austria.com/">
-    <meta property="og:image" content="https://i.postimg.cc/tgP1kDRW/hereinspaziert-traumf-nger.jpg">
-    <meta property="og:image:alt" content="Welcome to SCD Austria">
+    <meta property="og:url" content="https://www.scd-austria.com/gallery.php">
+    <meta property="og:image" content="<?php echo getRandomHeroImage(); ?>">
+    <meta property="og:image:alt" content="SCD Austria Galerie Highlight">
+    <meta property="og:site_name" content="SCD Austria">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="keywords" content="SCD Austria, Galerie, Workshops, Events, Gemeinschaft, Bilder, Fotogalerie, Veranstaltungen, Treffen">
+    <meta name="author" content="SCD Austria">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.scd-austria.com/gallery.php">
 
     <link rel="icon" href="Site/favicon.ico" sizes="any">
     <link rel="icon" href="Site/icon.svg" type="image/svg+xml">
@@ -31,21 +41,23 @@ require_once 'includes/gallery_functions.php';
 
 <body>
     <nav class="navbar">
+        <a href="index.html" class="logo-link">
+            <img src="Site/img/Logo_Transparent.png" alt="SCD Austria Logo" class="nav-logo">
+        </a>
         <button class="menu-toggle" type="button">
             <span></span>
             <span></span>
             <span></span>
         </button>
         <div class="section-inner">
-            <a href="index.html" class="logo-link">
-                <img src="Site/img/Logo_Transparent.png" alt="SCD Austria Logo" class="nav-logo">
-            </a>
-            <a href="index.html" class="link">Home<span class="bar"></span></a>
-            <a href="events.html" class="link">Events<span class="bar"></span></a>
-            <a href="gallery.php" class="link active">Gallery<span class="bar"></span></a>
-            <a href="future.html" class="link">Future<span class="bar"></span></a>
-            <a href="about.html" class="link">About<span class="bar"></span></a>
-            <a href="kontakt.html" class="link">Kontakt<span class="bar"></span></a>
+            <div class="nav-links">
+                <a href="index.html" class="link">Home<span class="bar"></span></a>
+                <a href="events.html" class="link">Events<span class="bar"></span></a>
+                <a href="gallery.php" class="link active">Gallery<span class="bar"></span></a>
+                <a href="future.html" class="link">Future<span class="bar"></span></a>
+                <a href="about.html" class="link">About<span class="bar"></span></a>
+                <a href="kontakt.html" class="link">Kontakt<span class="bar"></span></a>
+            </div>
         </div>
     </nav>
 

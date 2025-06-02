@@ -33,21 +33,23 @@ require_once 'includes/gallery_functions.php';
 
 <body>
 <nav class="navbar">
+    <a href="index.html" class="logo-link">
+        <img src="Site/img/Logo_Transparent.png" alt="SCD Austria Logo" class="nav-logo">
+    </a>
     <button class="menu-toggle" type="button">
         <span></span>
         <span></span>
         <span></span>
     </button>
     <div class="section-inner">
-        <a href="index.html" class="logo-link">
-            <img src="Site/img/Logo_Transparent.png" alt="SCD Austria Logo" class="nav-logo">
-        </a>
-        <a href="index.html" class="link active">Home<span class="bar"></span></a>
-        <a href="events.html" class="link">Events<span class="bar"></span></a>
-        <a href="gallery.php" class="link">Gallery<span class="bar"></span></a>
-        <a href="future.html" class="link">Future<span class="bar"></span></a>
-        <a href="about.html" class="link">About<span class="bar"></span></a>
-        <a href="kontakt.html" class="link">Kontakt<span class="bar"></span></a>
+        <div class="nav-links">
+            <a href="index.html" class="link active">Home<span class="bar"></span></a>
+            <a href="events.html" class="link">Events<span class="bar"></span></a>
+            <a href="gallery.php" class="link">Gallery<span class="bar"></span></a>
+            <a href="future.html" class="link">Future<span class="bar"></span></a>
+            <a href="about.html" class="link">About<span class="bar"></span></a>
+            <a href="kontakt.html" class="link">Kontakt<span class="bar"></span></a>
+        </div>
     </div>
 </nav>
 
@@ -76,18 +78,21 @@ require_once 'includes/gallery_functions.php';
 
     <section class="future-intro">
         <div class="content-box">
-            <!-- Sprachwahl -->
-            <label for="lang-select" style="font-weight:500; margin-right:0.5rem;">
-                Sprache / Мова:
-            </label>
-            <select id="lang-select" style="padding:0.25rem 0.5rem; font-size:1rem; border-radius:4px; border:1px solid #ccc;">
-                <option value="de">Deutsch</option>
-                <option value="ua">Українська</option>
-            </select>
+            <p>Willkommen in unserem Raum für natürliche Erneuerung!</p>
 
-            <!-- Container, in den die Home-Texte (id=1) aus texts.yaml geschrieben werden -->
-            <!-- data-section-id gibt an, welche Sektion geladen wird -->
-            <div id="home-container" data-section-id="1" style="margin-top:1rem;"></div>
+            <p>Seit über 7 Jahren begleiten wir Menschen auf ihrem Weg zu mehr Wohlbefinden, innerer Balance
+            und einem bewussten Leben in Verbindung mit der Natur. Unser Ziel ist es, dass sich jeder Mensch
+            körperlich und seelisch besser fühlt.</p>
+
+            <p>Wir glauben, dass echte Fürsorge im Kleinen beginnt: mit einer Tasse Kräutertee, der Wärme einer
+            Kräuter-Dampfkabine, einem offenen Gespräch oder dem Duft von Wiesenblumen. Aus solchen
+            Momenten wächst das Gefühl von Ganzheit.</p>
+
+            <p>Wir heilen nicht – wir begleiten. Wir versprechen keine Wunder – wir schaffen Raum für natürliche
+            Erholung.</p>
+
+            <p>Kommen Sie zu unseren Treffen, Seminaren und gemeinsamen Erlebnissen. Kehren wir gemeinsam
+            zu uns selbst zurück – durch Natur, Gemeinschaft und Herzenswärme.</p>
         </div>
     </section>
 
@@ -118,15 +123,15 @@ require_once 'includes/gallery_functions.php';
             <h2>Aktuelle News</h2>
             <div class="news-list">
                 <div class="news-item">
-                    <span class="news-date">15. März 2024</span>
-                    <h4>Neue Veranstaltungen für 2024</h4>
-                    <p>Ein spannendes Jahr voller Möglichkeiten zur persönlichen Entwicklung liegt vor uns. Wir haben ein vielfältiges Programm zusammengestellt...</p>
+                    <span class="news-date">2. Juni 2025</span>
+                    <h4>Sommerworkshops im Freien</h4>
+                    <p>Ab Juli starten unsere beliebten Outdoor-Workshops in der Natur.</p>
                     <a href="news.html#news1" class="read-more">Weiterlesen</a>
                 </div>
                 <div class="news-item">
-                    <span class="news-date">1. März 2024</span>
-                    <h4>Erfolgreicher Abschluss unseres Winterretreats</h4>
-                    <p>Ein intensives Wochenende voller Inspiration, Austausch und persönlichem Wachstum liegt hinter uns...</p>
+                    <span class="news-date">2. Juni 2025</span>
+                    <h4>Kräutergarten-Projekt</h4>
+                    <p>Start unseres gemeinschaftlichen Kräutergarten-Projekts.</p>
                     <a href="news.html#news2" class="read-more">Weiterlesen</a>
                 </div>
             </div>

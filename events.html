@@ -30,21 +30,23 @@ require_once 'includes/gallery_functions.php';
 
 <body>
     <nav class="navbar">
+        <a href="index.html" class="logo-link">
+            <img src="Site/img/Logo_Transparent.png" alt="SCD Austria Logo" class="nav-logo">
+        </a>
         <button class="menu-toggle" type="button">
             <span></span>
             <span></span>
             <span></span>
         </button>
         <div class="section-inner">
-            <a href="index.html" class="logo-link">
-                <img src="Site/img/Logo_Transparent.png" alt="SCD Austria Logo" class="nav-logo">
-            </a>
-            <a href="index.html" class="link">Home<span class="bar"></span></a>
-            <a href="events.html" class="link active">Events<span class="bar"></span></a>
-            <a href="gallery.php" class="link">Gallery<span class="bar"></span></a>
-            <a href="future.html" class="link">Future<span class="bar"></span></a>
-            <a href="about.html" class="link">About<span class="bar"></span></a>
-            <a href="kontakt.html" class="link">Kontakt<span class="bar"></span></a>
+            <div class="nav-links">
+                <a href="index.html" class="link">Home<span class="bar"></span></a>
+                <a href="events.html" class="link active">Events<span class="bar"></span></a>
+                <a href="gallery.php" class="link">Gallery<span class="bar"></span></a>
+                <a href="future.html" class="link">Future<span class="bar"></span></a>
+                <a href="about.html" class="link">About<span class="bar"></span></a>
+                <a href="kontakt.html" class="link">Kontakt<span class="bar"></span></a>
+            </div>
         </div>
     </nav>
 
@@ -61,40 +63,40 @@ require_once 'includes/gallery_functions.php';
         <div class="events-container">
             <!-- Event Card 1 -->
             <div class="event-card">
-                <img src="Site/gallery-images/hero.jpeg" alt="Treffen im Verein" class="event-image">
+                <img src="Site/gallery-images/hero.jpeg" alt="Kräutergarten-Projekt" class="event-image">
                 <div class="event-content">
-                    <span class="event-date">28. Sep 2025</span>
-                    <h3 class="event-title">Treffen im Verein</h3>
+                    <span class="event-date">Ab Juli 2025</span>
+                    <h3 class="event-title">Kräutergarten-Projekt</h3>
                     <p class="event-location">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
                         </svg>
                         Phloxgasse 1A, 2353 Guntramsdorf
                     </p>
-                    <p class="event-description">Wir treffen uns im Verein für eine kleine Besprechung</p>
+                    <p class="event-description">Werden Sie Teil unseres gemeinschaftlichen Kräutergarten-Projekts. Lernen Sie über Kräuterkunde und die Herstellung von Naturheilmitteln.</p>
                     <div class="event-footer">
                         <a href="#" class="event-button primary" onclick="handleRegistration()">Anmelden</a>
-                        <a href="gallery.php#gallery-Keine-Ahnung" class="event-button primary" style="margin-top: 0.5em">Siehe Bildergalerie</a>
+                        <a href="news.html#news2" class="event-button primary" style="margin-top: 0.5em">Mehr Info</a>
                     </div>
                 </div>
             </div>
 
             <!-- Event Card 2 -->
             <div class="event-card">
-                <img src="Site/gallery-images/hero.jpeg" alt="Workshop: Persönliche Entwicklung" class="event-image">
+                <img src="Site/gallery-images/hero.jpeg" alt="Sommerworkshops im Freien" class="event-image">
                 <div class="event-content">
-                    <span class="event-date">15. Okt 2025</span>
-                    <h3 class="event-title">Workshop: Persönliche Entwicklung</h3>
+                    <span class="event-date">Ab Juli 2025</span>
+                    <h3 class="event-title">Sommerworkshops im Freien</h3>
                     <p class="event-location">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
                         </svg>
-                        Online Event
+                        Phloxgasse 1A, 2353 Guntramsdorf
                     </p>
-                    <p class="event-description">Ein interaktiver Workshop zur Förderung der persönlichen Entwicklung.</p>
+                    <p class="event-description">Erleben Sie unsere beliebten Outdoor-Workshops mit Meditation in der Natur, Outdoor-Aktivitäten für Körper und Geist und naturverbundenen Heilpraktiken.</p>
                     <div class="event-footer">
                         <a href="#" class="event-button primary" onclick="handleRegistration()">Anmelden</a>
-                        <a href="gallery.php#gallery-Phyto-Fass" class="event-button primary" style="margin-top: 0.5em">Siehe Bildergalerie</a>
+                        <a href="news.html#news1" class="event-button primary" style="margin-top: 0.5em">Mehr Info</a>
                     </div>
                 </div>
             </div>

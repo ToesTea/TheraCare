@@ -1011,38 +1011,79 @@ nav *{
 }
 
 .about-intro .content-box {
+    text-align: left;
+    background: var(--background-light);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(165, 181, 121, 0.1);
     position: relative;
+    overflow: hidden;
 }
 
 .about-intro .content-box::before {
-    display: none;
-}
-
-.about-intro h2 {
-    color: var(--text-dark);
-    margin-bottom: var(--spacing-xl);
-    position: relative;
-    padding-bottom: var(--spacing-md);
-    text-align: center;
-}
-
-.about-intro h2::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: var(--primary);
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient-primary);
 }
 
-.about-intro p {
+.about-intro .content-box h2 {
+    color: var(--text-dark);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+    padding-left: var(--spacing-lg);
+}
+
+.about-intro .content-box p {
     font-size: var(--font-size-md);
     line-height: 1.8;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.about-intro .content-box ul {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-lg) 0;
+}
+
+.about-intro .content-box ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-md);
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
+.about-intro .content-box ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .about-intro .content-box {
+        padding: var(--spacing-lg);
+    }
+
+    .about-intro .content-box h2 {
+        font-size: 1.75rem;
+        padding-left: var(--spacing-md);
+    }
+
+    .about-intro .content-box p,
+    .about-intro .content-box ul li {
+        font-size: var(--font-size-base);
+    }
 }
 
 /* Team Section Styles */
@@ -2702,5 +2743,100 @@ main > div:first-child {
     }
 }
 
+/* Future Intro Section Styles */
+.future-intro {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--background-light);
+}
+
+.future-intro .content-box {
+    text-align: left;
+    background: var(--background-light);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(165, 181, 121, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.future-intro .content-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient-primary);
+}
+
+.future-intro .intro-highlight {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+    padding-left: var(--spacing-lg);
+    font-weight: 600;
+}
+
+.future-intro .intro-text-block {
+    padding-left: var(--spacing-lg);
+}
+
+.future-intro .intro-text-block p {
+    font-size: var(--font-size-md);
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.future-intro .emphasis-text {
+    font-size: var(--font-size-lg);
+    color: var(--primary);
+    text-align: left;
+    font-style: italic;
+    margin: var(--spacing-lg) 0;
+    padding: var(--spacing-md) 0;
+    border-top: 1px solid var(--primary-light);
+    border-bottom: 1px solid var(--primary-light);
+    background: rgba(165, 181, 121, 0.05);
+    padding-left: var(--spacing-lg);
+}
+
+.future-intro .closing-text {
+    text-align: left;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-top: var(--spacing-lg);
+    font-size: var(--font-size-md);
+    line-height: 1.8;
+    padding-left: var(--spacing-lg);
+}
+
+@media screen and (max-width: 768px) {
+    .future-intro .content-box {
+        padding: var(--spacing-lg);
+    }
+
+    .future-intro .intro-highlight {
+        font-size: 1.75rem;
+        padding-left: var(--spacing-md);
+    }
+
+    .future-intro .intro-text-block,
+    .future-intro .emphasis-text,
+    .future-intro .closing-text {
+        padding-left: var(--spacing-md);
+    }
+
+    .future-intro .intro-text-block p,
+    .future-intro .closing-text {
+        font-size: var(--font-size-base);
+    }
+
+    .future-intro .emphasis-text {
+        font-size: var(--font-size-md);
+    }
+}
 
 

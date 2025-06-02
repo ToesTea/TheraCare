@@ -1137,6 +1137,45 @@ nav *{
     text-align: center;
 }
 
+.team-member .contact-info {
+    padding: 0 var(--spacing-md);
+    text-align: left;
+}
+
+.team-member .contact-info h5 {
+    color: var(--primary);
+    margin: var(--spacing-md) 0 var(--spacing-xs);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.team-member .contact-info p {
+    margin: 0 0 var(--spacing-sm);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.team-member .qualification-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-md);
+}
+
+.team-member .qualification-list li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.team-member .qualification-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
 /* Location Section */
 .location-section {
     padding: var(--spacing-xl) 0;

@@ -249,17 +249,79 @@ body {
 @media screen and (max-width: 768px) {
     .menu-toggle {
         display: block;
+        z-index: var(--z-menu-toggle); /* Ensure it's above other elements */
+    }
+
+    .navbar {
+        height: auto; /* Allow navbar to expand for vertical links */
+        min-height: var(--nav-height); /* Keep original minimum height */
+    }
+
+    .navbar .section-inner {
+        /* display: none; */ /* Original rule, might be overridden by JS or specific active state */
+        /* flex-direction: column; */ /* If it becomes visible, stack items */
+        /* align-items: flex-start; */ /* Align to the start */
+        /* position: absolute; */
+        /* top: var(--nav-height); */ /* Position below the initial navbar area */
+        /* left: 0; */
+        /* width: 100%; */
+        /* background-color: var(--nav-bg); */ /* Same as navbar or a different shade */
+        /* padding: 10px 0; */ /* Padding for the dropdown area */
+        /* box-shadow: var(--shadow-md); */ /* Optional shadow for depth */
+        /* transform: translateY(-100%); */ /* Start off-screen */
+        /* transition: transform var(--transition-base); */ /* Smooth transition */
+        /* opacity: 0; */ /* Start hidden */
+        /* pointer-events: none; */ /* Not interactive when hidden */
+    }
+
+    /* This is the crucial part for the expanded menu items */
+    .navbar.active .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        width: 100%; /* Take full width of the .section-inner */
+        padding: var(--spacing-sm) 0; /* Add some vertical padding */
+        background-color: var(--nav-bg); /* Ensure background for dropdown */
+    }
+
+    .navbar.active .nav-links .link {
+        width: 100%; /* Make links take full width of their container */
+        padding: var(--spacing-sm) var(--spacing-md); /* Consistent padding */
+        text-align: left; /* Align text to the left */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+
+    .navbar.active .nav-links .link:last-child {
+        border-bottom: none; /* No border for the last item */
+    }
+
+    .navbar.active .nav-links .link.active::after {
+        left: var(--spacing-md); /* Adjust active indicator for new padding */
+        right: var(--spacing-md);
+        bottom: 0; /* Position at the very bottom of the link */
+    }
+
+    .navbar.active .nav-links .link:hover::after {
+        left: var(--spacing-md); /* Adjust hover indicator */
+        right: var(--spacing-md);
+        bottom: 0;
+    }
+
+    /* Adjustments for the .section-inner when menu is active */
+    .navbar.active .section-inner {
+        display: flex; /* Ensure it's flex to contain .nav-links properly */
+        flex-direction: column;
+        align-items: stretch; /* Make .nav-links stretch to full width */
         position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 35px;
-        height: 30px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        z-index: var(--z-menu-toggle);
+        top: var(--nav-height); /* Position below the main nav bar part */
+        left: 0;
+        width: 100%;
+        background-color: var(--nav-bg); /* Match nav-links or be transparent if nav-links has its own */
+        transform: translateY(0); /* Bring it into view */
+        opacity: 1;
+        pointer-events: auto;
+        z-index: calc(var(--z-navbar) - 1); /* Below toggle button but above page content */
     }
 
     .navbar {

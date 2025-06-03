@@ -26,6 +26,132 @@ require_once 'includes/gallery_functions.php';
 
     <link rel="manifest" href="Site/site.webmanifest">
     <meta name="theme-color" content="#f5f1e3">
+
+    <style>
+        /* Base responsive styles */
+        .content {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Hero section responsive */
+        .hero-background {
+            height: 60vh;
+            min-height: 400px;
+        }
+
+        .hero-content {
+            width: 90%;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        /* Events section responsive */
+        .events-section {
+            padding: 4rem 0;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .events-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .event-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .event-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .event-content {
+            flex: 1;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .event-footer {
+            margin-top: auto;
+            padding-top: 1rem;
+        }
+
+        /* Terms section responsive */
+        .content-box {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .hero-background {
+                height: 50vh;
+            }
+
+            .events-container {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-background {
+                height: 40vh;
+                min-height: 300px;
+            }
+
+            .hero-content {
+                padding: 1.5rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .events-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .event-image {
+                height: 200px;
+            }
+
+            .event-content {
+                padding: 1.25rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .event-card {
+                margin: 0 1rem;
+            }
+
+            .content-box {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -51,7 +177,7 @@ require_once 'includes/gallery_functions.php';
     </nav>
 
     <div class="hero-background">
-        <img src="Site/gallery-images/hero.jpeg" alt="Events Hero" class="hero-image">
+        <img src="Site/img/event.jpg" alt="Events Hero" class="hero-image">
         <div class="hero-content">
             <h1>Unsere Events</h1>
             <p>Entdecken Sie unsere vielfältigen Veranstaltungen und werden Sie Teil unserer Gemeinschaft.</p>
@@ -63,7 +189,7 @@ require_once 'includes/gallery_functions.php';
         <div class="events-container">
             <!-- Event Card 1 -->
             <div class="event-card">
-                <img src="Site/gallery-images/hero.jpeg" alt="Treffen im Verein" class="event-image">
+                <img src="Site/img/event1.jpeg" alt="Treffen im Verein" class="event-image">
                 <div class="event-content">
                     <span class="event-date">15. Juli 2024</span>
                     <h3 class="event-title">Treffen im Verein</h3>
@@ -82,7 +208,7 @@ require_once 'includes/gallery_functions.php';
 
             <!-- Event Card 2 -->
             <div class="event-card">
-                <img src="Site/gallery-images/hero.jpeg" alt="Workshop: Persönliche Entwicklung" class="event-image">
+                <img src="Site/img/event2_neu.jpg" alt="Workshop: Persönliche Entwicklung" class="event-image">
                 <div class="event-content">
                     <span class="event-date">20. Juli 2024</span>
                     <h3 class="event-title">Workshop: Persönliche Entwicklung</h3>
@@ -101,7 +227,7 @@ require_once 'includes/gallery_functions.php';
 
             <!-- Event Card 3 -->
             <div class="event-card">
-                <img src="Site/gallery-images/hero.jpeg" alt="Entspannungstechniken Workshop" class="event-image">
+                <img src="Site/img/event3.jpg" alt="Entspannungstechniken Workshop" class="event-image">
                 <div class="event-content">
                     <span class="event-date">25. Juli 2024</span>
                     <h3 class="event-title">Entspannungstechniken Workshop</h3>

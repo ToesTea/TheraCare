@@ -29,6 +29,131 @@ require_once 'includes/gallery_functions.php';
 
     <!-- js-yaml (für das Parsen von texts.yaml) -->
     <script src="https://cdn.jsdelivr.net/npm/js-yaml/dist/js-yaml.min.js"></script>
+
+    <style>
+        /* Base responsive styles */
+        .content {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Hero section responsive */
+        .hero-background {
+            height: 80vh;
+            min-height: 500px;
+        }
+
+        .hero-content {
+            width: 90%;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        /* Intro section responsive */
+        .home-intro {
+            padding: 4rem 0;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        /* Features section responsive */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* News and Events section responsive */
+        .home-news-events {
+            padding: 4rem 0;
+        }
+
+        .news-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .hero-background {
+                height: 70vh;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .intro-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-background {
+                height: 60vh;
+                min-height: 400px;
+            }
+
+            .hero-content {
+                padding: 1.5rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+
+            .news-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-background {
+                height: 50vh;
+                min-height: 300px;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .feature-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>

@@ -26,6 +26,156 @@ require_once 'includes/gallery_functions.php';
 
     <link rel="manifest" href="Site/site.webmanifest">
     <meta name="theme-color" content="#f5f1e3">
+
+    <style>
+        /* Base responsive styles */
+        .content {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Hero section responsive */
+        .hero-background {
+            height: 60vh;
+            min-height: 400px;
+        }
+
+        .hero-content {
+            width: 90%;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        /* About intro section responsive */
+        .about-intro {
+            padding: 4rem 0;
+        }
+
+        .content-box {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Team section responsive */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            padding: 2rem 0;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .image-box {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .team-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        .contact-info {
+            text-align: left;
+            margin-top: 1.5rem;
+        }
+
+        /* Location section responsive */
+        .map-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .hero-background {
+                height: 50vh;
+            }
+
+            .team-grid {
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-background {
+                height: 40vh;
+                min-height: 300px;
+            }
+
+            .hero-content {
+                padding: 1.5rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .content-box {
+                padding: 1.5rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .image-box {
+                max-width: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .content-box {
+                padding: 1.25rem;
+                margin: 0 1rem 2rem;
+            }
+
+            .team-member {
+                margin: 0 1rem;
+            }
+        }
+
+        /* Qualification list responsive */
+        .qualification-list {
+            padding-left: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .qualification-list {
+                padding-left: 1.25rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -51,7 +201,7 @@ require_once 'includes/gallery_functions.php';
     </nav>
 
     <div class="hero-background">
-        <img src="Site/img/About.jpg" alt="About Foto" class="hero-image">
+        <img src="Site/img/Team.jpg" alt="About Foto" class="hero-image">
         <div class="hero-content">
             <h1>Über uns</h1>
             <p>Lernen Sie uns und unsere Vision kennen</p>

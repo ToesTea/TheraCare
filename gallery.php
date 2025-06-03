@@ -25,8 +25,8 @@ require_once 'includes/gallery_functions.php';
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.scd-austria.com/gallery.php">
 
-    <link rel="icon" href="Site/favicon.ico" sizes="any">
-    <link rel="icon" href="Site/icon.svg" type="image/svg+xml">
+    <link rel="icon" href="Site/logo.ico" sizes="any">
+    <link rel="icon" href="Site/logo.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="Site/icon.png">
 
     <link rel="stylesheet" href="Site/css/normalize.css">

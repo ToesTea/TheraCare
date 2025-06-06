@@ -549,7 +549,7 @@ nav *{
     .menu-toggle {
         display: flex;
         position: fixed;
-        top: 16vh;
+        top: 52px;
         right: 6vw;
         width: 30px;
         height: 24px;

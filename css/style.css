@@ -884,7 +884,6 @@ nav *{
 .footer-section {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-sm);
     padding: var(--spacing-md);
     background: rgba(255, 255, 255, 0.03);
     border-radius: var(--border-radius-lg);
@@ -2096,10 +2095,6 @@ main > div:first-child {
         padding: var(--spacing-md);
     }
 
-    .event-footer {
-        padding: 0 var(--spacing-md) var(--spacing-md);
-    }
-
     .event-title {
         font-size: var(--font-size-md);
     }
@@ -2108,10 +2103,6 @@ main > div:first-child {
 @media screen and (max-width: 480px) {
     .events-container {
         grid-template-columns: 1fr;
-    }
-
-    .event-button {
-        width: 100%;
     }
 }
 
@@ -2615,7 +2606,6 @@ main > div:first-child {
 
     .button,
     .event-button {
-        width: 100%;
         margin-bottom: var(--spacing-xs);
     }
 }

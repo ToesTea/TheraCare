@@ -95,6 +95,7 @@ require_once 'includes/gallery_functions.php';
                         <li><a href="events.html">Veranstaltungen</a></li>
                         <li><a href="gallery.php">Galerie</a></li>
                         <li><a href="datenschutz.html">Datenschutz</a></li>
+                        <li><a href="impressum.html">Impressum</a></li>
                     </ul>
                     <div class="social-links">
                         <a href="https://www.instagram.com/scd.austria/" target="_blank">

@@ -58,8 +58,8 @@
     --border-radius-lg: 12px;
     
     /* Shadows */
-    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
-    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.2);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.2);
     --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
     
     /* Transitions */
@@ -72,7 +72,9 @@
     --z-menu-toggle: 2000;
     --z-modal: 3000;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     background: var(--background);
     color: var(--text-dark);
@@ -255,23 +257,6 @@ body {
     .navbar {
         height: auto; /* Allow navbar to expand for vertical links */
         min-height: var(--nav-height); /* Keep original minimum height */
-    }
-
-    .navbar .section-inner {
-        /* display: none; */ /* Original rule, might be overridden by JS or specific active state */
-        /* flex-direction: column; */ /* If it becomes visible, stack items */
-        /* align-items: flex-start; */ /* Align to the start */
-        /* position: absolute; */
-        /* top: var(--nav-height); */ /* Position below the initial navbar area */
-        /* left: 0; */
-        /* width: 100%; */
-        /* background-color: var(--nav-bg); */ /* Same as navbar or a different shade */
-        /* padding: 10px 0; */ /* Padding for the dropdown area */
-        /* box-shadow: var(--shadow-md); */ /* Optional shadow for depth */
-        /* transform: translateY(-100%); */ /* Start off-screen */
-        /* transition: transform var(--transition-base); */ /* Smooth transition */
-        /* opacity: 0; */ /* Start hidden */
-        /* pointer-events: none; */ /* Not interactive when hidden */
     }
 
     /* This is the crucial part for the expanded menu items */
@@ -2881,5 +2866,35 @@ main > div:first-child {
         font-size: var(--font-size-md);
     }
 }
-
-
+#goUp{
+    background-color: var(--accent-2);
+    display: flex;
+    position: fixed;
+    float: right;
+    bottom: 10vh;
+    z-index: var(--z-navbar);
+    height: 10vw;
+    width: 10vw;
+    min-height: 30px;
+    min-width: 30px;
+    max-height: 50px;
+    max-width: 50px;
+    margin-left: 88vw;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+    
+}
+#goUp:hover{
+    transform: translateY(-5px);
+    color: var(--gray-light);
+}
+#goUpLink{
+    display: block;
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    text-align: center;
+}

@@ -68,3 +68,13 @@ document.addEventListener('DOMContentLoaded', () => {
     loadHomeText(langSelect.value);
   }
 });
+window.addEventListener("scroll",function(){
+  if(this.document.getElementById("shouldShow")!=null){
+    if(this.window.pageYOffset>300){
+      this.document.getElementById("shouldShow").innerHTML='<a href="#top" id="goUpLink"><div id="goUp">↑</div></a>';
+    }
+    else{
+      this.document.getElementById("shouldShow").innerHTML="";
+    }
+  }
+});

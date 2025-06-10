@@ -61,6 +61,8 @@ require_once 'includes/gallery_functions.php';
         </div>
     </nav>
 
+    <div id="shouldShow"></div>
+    
     <div class="hero-background">
         <img src="<?php echo getRandomHeroImage(); ?>" alt="Galerie Hero" class="hero-image">
         <div class="hero-content">

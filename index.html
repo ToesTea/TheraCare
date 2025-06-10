@@ -157,7 +157,8 @@ require_once 'includes/gallery_functions.php';
 </head>
 
 <body>
-<nav class="navbar">
+<div id="top"></div>
+<nav class="navbar" >
     <a href="index.html" class="logo-link">
         <img src="Site/img/Logo_Transparent.png" alt="SCD Austria Logo" class="nav-logo">
     </a>
@@ -176,7 +177,10 @@ require_once 'includes/gallery_functions.php';
             <a href="kontakt.html" class="link">Kontakt<span class="bar"></span></a>
         </div>
     </div>
+    
 </nav>
+
+<div id="shouldShow"></div>
 
 <div class="hero-background">
     <img src="Site/img/Home_Nature.jpg" alt="Bild der Natur" class="hero-image">
@@ -187,6 +191,7 @@ require_once 'includes/gallery_functions.php';
 </div>
 
 <main class="content" role="main">
+    
     <!-- Intro Section with Grid Layout -->
     <section class="home-intro">
         <div class="intro-grid">
@@ -264,6 +269,7 @@ require_once 'includes/gallery_functions.php';
             </div>
         </div>
     </section>
+    
 </main>
 
 <footer class="footer">
@@ -304,6 +310,7 @@ require_once 'includes/gallery_functions.php';
         </div>
     </div>
 </footer>
+
 
 <script src="js/app.js"></script>
 <script src="js/navbar.js"></script>

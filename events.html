@@ -230,70 +230,53 @@ require_once 'includes/gallery_functions.php';
 
     <main class="events-section" role="main">
         <!-- Events Container -->
-        <div class="events-container">
-            <!-- Event Card 1 -->
-            <div class="event-card">
-                <img src="Site/img/event1.jpeg" alt="Treffen im Verein" class="event-image">
-                <div class="event-content">
-                    <span class="event-date">15. Juli 2024</span>
-                    <h3 class="event-title">Treffen im Verein</h3>
-                    <p class="event-location">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
-                        </svg>
-                        Phloxgasse 1A, 2353 Guntramsdorf
-                    </p>
-                    <p class="event-description">Wir treffen uns im Verein für eine kleine Besprechung. Gemeinsam planen wir kommende Aktivitäten und tauschen uns über aktuelle Entwicklungen aus. Ihre Ideen und Vorschläge sind herzlich willkommen!</p>
-                    <div class="event-footer">
-                        <a href="#" class="event-button primary" onclick="handleRegistration()">Anmelden</a>
+        <div class="content-box">
+            <h2>Unsere Events</h2>
+            <div class="events-grid">
+                <!-- Event Card 1 -->
+                <div class="event-card">
+                    <img src="Site/img/event1.jpg" alt="Bild des Fasses" class="event-image">
+                    <div class="event-content">
+                        <h3 class="event-title">Phyto-Fass</h3>
+                        <p class="event-description">Das Phyto-Fass ist die moderne Verkörperung einer uralten Heilmethode – Dampfbäder mit Heilkräutern.
+                            Ihre Wurzeln reichen Jahrhunderte zurück. In Tibet, der Mongolei und China nutzte man ähnliche Anwendungen, die in der Volksmedizin als „Kräuterdampfbad" bekannt waren.
+                            <br>Preis auf Abfrage</p>
+                        <div class="event-footer">
+                            <a href="#" class="event-button primary" onclick="handleRegistration()">Anmelden</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Event Card 2 -->
-            <div class="event-card">
-                <img src="Site/img/event2_neu.jpg" alt="Workshop: Persönliche Entwicklung" class="event-image">
-                <div class="event-content">
-                    <span class="event-date">20. Juli 2024</span>
-                    <h3 class="event-title">Workshop: Persönliche Entwicklung</h3>
-                    <p class="event-location">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
-                        </svg>
-                        Online Workshop
-                    </p>
-                    <p class="event-description">Ein interaktiver Online-Workshop zur Förderung der persönlichen Entwicklung. Lernen Sie praktische Techniken und Methoden kennen, die Ihnen helfen, Ihr volles Potenzial zu entfalten.</p>
-                    <div class="event-footer">
-                        <a href="#" class="event-button primary" onclick="handleRegistration()">Anmelden</a>
+                <!-- Event Card 2 -->
+                <div class="event-card">
+                    <img src="Site/img/event2_neu.jpg" alt="Workshop: Persönliche Entwicklung" class="event-image">
+                    <div class="event-content">
+                        <h3 class="event-title">Cranio-Sacrale Begleitung</h3>
+                        <p class="event-description">Eine sanfte, tiefgehende Körperarbeit, die zur inneren Ruhe führt<br>
+                            • Tiefe Entspannung - für Menschen mit viel innerer Anspannung<br>
+                            • Emotionale Balance - wenn das seelische Gleichgewicht fehlt<br>
+                            • Regeneration - nach schwierigen Phasen, Verlust oder Erschöpfung</p>
+                        <div class="event-footer">
+                            <a href="#" class="event-button primary" onclick="handleRegistration()">Anmelden</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Event Card 3 -->
-            <div class="event-card">
-                <img src="Site/img/event3.jpg" alt="Entspannungstechniken Workshop" class="event-image">
-                <div class="event-content">
-                    <span class="event-date">25. Juli 2024</span>
-                    <h3 class="event-title">Entspannungstechniken Workshop</h3>
-                    <p class="event-location">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
-                        </svg>
-                        Phloxgasse 1A, 2353 Guntramsdorf
-                    </p>
-                    <p class="event-description">Lernen Sie verschiedene Entspannungstechniken kennen und wie Sie diese im Alltag anwenden können. Der Workshop bietet praktische Übungen und Tipps für mehr Gelassenheit im täglichen Leben.</p>
-                    <div class="event-footer">
-                        <a href="#" class="event-button primary" onclick="handleRegistration()">Anmelden</a>
-                    </div>
-                </div>
+                <p style="padding-top: 1rem;">Viele weitere Events finden Sie im Google-Kalender unten.</p>
             </div>
         </div>
 
         <!-- Google Calendar Section -->
-        <div class="calendar-section">
-            <h2>Eventkalender</h2>
-            <div class="calendar-container">
-                <iframe src="https://calendar.google.com/calendar/embed?src=531c1c33179d2e48772a03f91d6ee57f1f7856e6d812912c75f4ea37468947b2%40group.calendar.google.com&ctz=Europe%2FVienna" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+        <div class="content-box" style="margin-top: var(--spacing-xl); padding-bottom: 2rem;>
+            <div class="calendar-section" style="padding-top: 1rem;">
+                <h2>Eventkalender</h2>
+                <p>Bitte akzeptieren Sie die Cookies von Google, um den Kalender anzuzeigen.</p>
+                <p>Danach können Sie auf einen Termin klicken und sich somit die Beschreibung und genauere Infos des Events anzeigen lassen.</p>
+                <div class="calendar-container">
+                    <iframe src="https://calendar.google.com/calendar/embed?src=531c1c33179d2e48772a03f91d6ee57f1f7856e6d812912c75f4ea37468947b2%40group.calendar.google.com&ctz=Europe%2FVienna" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+                </div>
+                <div class="event-footer"">
+                    <a href="#" class="event-button primary" onclick="handleRegistration()">Für ein beliebiges Event anmelden</a>
+                </div>
             </div>
         </div>
 

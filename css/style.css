@@ -2908,30 +2908,30 @@ main > div:first-child {
 .form-download .submit-button {
     display: inline-flex;
     align-items: center;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-md) var(--spacing-xl);
-    font-size: var(--font-size-md);
-    background: var(--gradient-primary);
-    color: var(--text-light);
-    border-radius: var(--border-radius-md);
+    justify-content: center;
+    padding: 1rem 2rem;
+    background: var(--primary);
+    color: var(--white);
     text-decoration: none;
-    transition: all var(--transition-base);
-    box-shadow: var(--shadow-sm);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .form-download .submit-button:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-    background: var(--gradient-secondary);
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .form-download .button-icon {
-    font-size: 1.4rem;
-    transition: transform var(--transition-base);
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
 }
 
 .form-download .submit-button:hover .button-icon {
-    transform: translateY(2px);
+    transform: translateX(4px);
 }
 
 #anmeldeformular {
@@ -2966,14 +2966,13 @@ main > div:first-child {
     font-size: var(--font-size-base);
 }
 
-#anmeldeformular a {
-    color: var(--primary);
+#anmeldeformular .submit-button {
+    color: var(--text-light);
     text-decoration: none;
     transition: color var(--transition-base);
 }
 
-#anmeldeformular a:hover {
-    color: var(--primary-dark);
+#anmeldeformular .submit-button:hover {
     text-decoration: underline;
 }
 

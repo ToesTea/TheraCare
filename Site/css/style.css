@@ -364,3 +364,100 @@ textarea {
     }
 }
 
+/* Spenden Page Styles */
+.content-box h1 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.content-box h2 {
+    color: var(--primary-color);
+    margin: 2rem 0 1rem;
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.content-box p {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.bank-details {
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bank-details h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.bank-details p {
+    margin: 0.8rem 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .content-box h1 {
+        font-size: 2rem;
+    }
+
+    .content-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .content-box p {
+        font-size: 1rem;
+    }
+
+    .bank-details {
+        padding: 1.5rem;
+    }
+
+    .bank-details p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Nested Content Boxes */
+.content-box .content-box {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.content-box .content-box:first-of-type {
+    margin-top: 3rem;
+}
+
+.content-box .content-box:last-of-type {
+    margin-bottom: 0;
+}
+
+.content-box .content-box h2 {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .content-box .content-box {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+    
+    .content-box .content-box:first-of-type {
+        margin-top: 2rem;
+    }
+}
+

@@ -85,6 +85,33 @@ require_once 'includes/gallery_functions.php';
         .event-footer {
             margin-top: auto;
             padding-top: 1rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .event-button {
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .event-button.primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .event-button.secondary {
+            background-color: var(--background-light);
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .event-button:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
         }
 
         /* Terms section responsive */
@@ -243,6 +270,7 @@ require_once 'includes/gallery_functions.php';
                         </p>
                         <div class="event-footer">
                             <a href="#" class="event-button primary" onclick="handleRegistration()">Anmelden</a>
+                            <a href="phytofass.html" class="event-button secondary">Mehr Info</a>
                         </div>
                     </div>
                 </div>
@@ -258,6 +286,7 @@ require_once 'includes/gallery_functions.php';
                             • Regeneration - nach schwierigen Phasen, Verlust oder Erschöpfung</p>
                         <div class="event-footer">
                             <a href="#" class="event-button primary" onclick="handleRegistration()">Anmelden</a>
+                            <a href="craniosacral.html" class="event-button secondary">Mehr Info</a>
                         </div>
                     </div>
                 </div>

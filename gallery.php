@@ -55,7 +55,7 @@ require_once 'includes/gallery_functions.php';
                 <a href="events.html" class="link">Events<span class="bar"></span></a>
                 <a href="gallery.php" class="link active">Gallery<span class="bar"></span></a>
                 <a href="future.html" class="link">Future<span class="bar"></span></a>
-                <a href="about.html" class="link">About<span class="bar"></span></a>
+                <a href="about.php" class="link">About<span class="bar"></span></a>
                 <a href="kontakt.html" class="link">Kontakt<span class="bar"></span></a>
             </div>
         </div>

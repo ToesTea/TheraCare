@@ -77,6 +77,7 @@ require_once 'includes/gallery_functions.php';
             width: 100%;
             max-width: 300px;
             margin: 0 auto 1.5rem;
+            padding-top: 2rem;
         }
 
         .team-image {
@@ -175,6 +176,77 @@ require_once 'includes/gallery_functions.php';
                 padding-left: 1.25rem;
             }
         }
+
+        .extended-popup {
+            position: fixed;
+            top: var(--nav-height, 80px);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: calc(100vh - var(--nav-height, 80px));
+            margin: 0;
+            padding: 0;
+        }
+
+        .extended-popup.active {
+            display: flex !important;
+        }
+
+        .extended-popup-content {
+            background: #fff;
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+            max-width: 1000px;
+            width: 95vw;
+            max-height: 90vh;
+            overflow-y: auto;
+            overflow-x: auto;
+            position: relative;
+            box-shadow: 0 8px 32px rgba(80,0,80,0.15);
+            margin: 0 auto;
+            border-radius: 12px;
+        }
+        .close-extended-btn {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #A04EDC;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .show-extended-btn {
+            margin-top: 1rem;
+            background: var(--gradient-primary);
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            height: 2.5rem;
+            min-height: 2.5rem;
+        }
+        .show-extended-btn:hover {
+            background: var(--gradient-secondary);
+        }
+
+        body {
+            position: relative;
+            z-index: 1;
+        }
     </style>
 </head>
 
@@ -236,65 +308,101 @@ require_once 'includes/gallery_functions.php';
             <div class="content-box">
                 <h2>Unser Team</h2>
                 <div class="team-grid">
-                    <div class="team-member">
-                        <div class="image-box">
-                            <img src="Site/img/Team_LM.jpg" alt="Teammitglied 1" class="team-image">
-                        </div>
-                        <h3>Lyudmila Malysheva</h3>
-                        <p class="role">Gründerin, Coach & Leiterin</p>
-                        <div class="contact-info">
-                            <h5>Adresse</h5>
-                            <p>
-                                Sparkassaplatz 9, Top 29.1<br>
-                                2000 Stockerau
-                            </p>
-                            <h5>Kontakt</h5>
-                            <p>
-                                Tel.: +436769729205<br>
-                                +436767753157<br>
-                                E-mail: ........<br>
-                                www.......<br>
-                                Facebook .....<br>
-                                Instagram.....
-                            </p>
-                            <h5>Bankverbindung</h5>
-                            <p>
-                                IBAN: AT93 3225 0000 0106 3189<br>
-                                BIC: RLNWATWWGTD
-                            </p>
-                        </div>
-                    </div>
+                <?php
+                $mitgliederDir = __DIR__ . '/Site/mitglieder';
+                foreach (new DirectoryIterator($mitgliederDir) as $member) {
+                    if ($member->isDot() || !$member->isDir()) continue;
+                    $infoPath = $member->getPathname() . '/info';
+                    $imgPath = $member->getPathname() . '/picture.jpg';
+                    $infoExtendedPath = $member->getPathname() . '/infoExtended';
+                    if (!file_exists($infoPath)) continue;
+                    $info = file($infoPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+                    $infoExtended = file_exists($infoExtendedPath) ? file($infoExtendedPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) : [];
 
+                    $name = '';
+                    $role = '';
+                    $sections = [];
+                    $currentSection = '';
+                    foreach ($info as $line) {
+                        if (preg_match('/^###(.+)/', $line, $m)) {
+                            $name = trim($m[1]);
+                        } elseif (preg_match('/^##(.+)/', $line, $m)) {
+                            $role = trim($m[1]);
+                        } elseif (preg_match('/^#([A-Za-zäöüÄÖÜß ]+)/u', $line, $m)) {
+                            $currentSection = strtolower(trim($m[1]));
+                            $sections[$currentSection] = [];
+                        } elseif (preg_match('/^-/', $line)) {
+                            $sections[$currentSection][] = ltrim($line, '- ');
+                        } elseif ($currentSection) {
+                            $sections[$currentSection][] = $line;
+                        }
+                    }
+                    $imgWebPath = 'Site/mitglieder/' . $member->getFilename() . '/picture.jpg';
+                    $popupId = 'popup_' . md5($member->getFilename());
+                ?>
                     <div class="team-member">
                         <div class="image-box">
-                            <img src="Site/img/Team_AB.jpg" alt="Teammitglied 2" class="team-image">
+                            <img src="<?= htmlspecialchars($imgWebPath) ?>" alt="<?= htmlspecialchars($name) ?>" class="team-image">
                         </div>
-                        <h3>Anja Brandt</h3>
-                        <p class="role">Coach</p>
+                        <h3><?= htmlspecialchars($name) ?></h3>
+                        <p class="role"><?= htmlspecialchars($role) ?></p>
                         <div class="contact-info">
-                            <h5>Adresse</h5>
-                            <p>
-                                Agsbach 603/37<br>
-                                2533 Klausen-Leopoldsdorf
-                            </p>
-                            <h5>Kontakt</h5>
-                            <p>
-                                Tel: 06641422058
-                            </p>
-                            <h5>Ausbildung</h5>
-                            <ul class="qualification-list">
-                                <li>DGKP Sankt Anna Kinderspital</li>
-                                <li>Diplomierte Cranio Sacral Praktikerin</li>
-                                <li>Zertifikat in Narbenentstörrung</li>
-                                <li>Herbalife Beraterin</li>
-                                <li>Aromatherapie /Heilende Frequenzen</li>
-                                <li>Vertrauensarbeit im Wasser</li>
-                                <li>Baby/ Kinderschwimmtrainerin</li>
-                            </ul>
-                            <h5>Sprachen</h5>
-                            <p>Deutsch/ Englisch</p>
+                            <?php foreach ($sections as $section => $values): ?>
+                                <?php if (empty($values)) continue; ?>
+                                <?php if ($section === 'ausbildung' || $section === 'sprachen') { ?>
+                                    <h5><?= ucfirst($section) ?></h5>
+                                    <ul class="qualification-list">
+                                        <?php foreach ($values as $v): ?>
+                                            <li><?= htmlspecialchars($v) ?></li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                <?php } else { ?>
+                                    <h5><?= ucfirst($section) ?></h5>
+                                    <p><?= implode('<br>', array_map('htmlspecialchars', $values)) ?></p>
+                                <?php } ?>
+                            <?php endforeach; ?>
                         </div>
+                        <button class="show-extended-btn" onclick="openExtendedPopup('<?= $popupId ?>')">Mehr anzeigen</button>
                     </div>
+                    <template id="template-<?= $popupId ?>">
+                        <div class='extended-popup-content'>
+                            <button class='close-extended-btn' onclick='closeExtendedPopup()'>&times;</button>
+                            <?php
+                            $extName = '';
+                            $extRole = '';
+                            $extSections = [];
+                            $extCurrentSection = '';
+                            foreach ($infoExtended as $line) {
+                                if (preg_match('/^###(.+)/', $line, $m)) {
+                                    $extName = trim($m[1]);
+                                    echo '<h3>' . htmlspecialchars($extName) . '</h3>';
+                                } elseif (preg_match('/^##(.+)/', $line, $m)) {
+                                    $extRole = trim($m[1]);
+                                    echo '<h4>' . htmlspecialchars($extRole) . '</h4>';
+                                } elseif (preg_match('/^#([A-Za-zäöüÄÖÜß ]+)/u', $line, $m)) {
+                                    $extCurrentSection = strtolower(trim($m[1]));
+                                    echo '<h5>' . htmlspecialchars(ucfirst($extCurrentSection)) . '</h5>';
+                                } elseif (preg_match('/^-/', $line)) {
+                                    if (!isset($extSections[$extCurrentSection])) $extSections[$extCurrentSection] = [];
+                                    $extSections[$extCurrentSection][] = ltrim($line, '- ');
+                                } elseif ($extCurrentSection) {
+                                    if (!isset($extSections[$extCurrentSection])) $extSections[$extCurrentSection] = [];
+                                    $extSections[$extCurrentSection][] = $line;
+                                }
+                            }
+                            // Listen ausgeben
+                            foreach ($extSections as $section => $values) {
+                                if (empty($values)) continue;
+                                echo '<ul class="qualification-list">';
+                                foreach ($values as $v) {
+                                    echo '<li>' . htmlspecialchars($v) . '</li>';
+                                }
+                                echo '</ul>';
+                            }
+                            ?>
+                        </div>
+                    </template>
+                <?php } ?>
                 </div>
             </div>
         </section>
@@ -361,8 +469,36 @@ require_once 'includes/gallery_functions.php';
         </div>
     </footer>
 
+    <div class="extended-popup" id="global-extended-popup" style="display:none;">
+    </div>
     <script src="js/app.js"></script>
     <script src="js/navbar.js"></script>
+    <script>
+    function openExtendedPopup(id) {
+        var popup = document.getElementById('global-extended-popup');
+        var template = document.getElementById('template-' + id);
+        if (template && popup) {
+            popup.innerHTML = template.innerHTML;
+            popup.style.display = 'flex';
+            popup.classList.add('active');
+        }
+    }
+    function closeExtendedPopup() {
+        var popup = document.getElementById('global-extended-popup');
+        if (popup) {
+            popup.style.display = 'none';
+            popup.classList.remove('active');
+            popup.innerHTML = '';
+        }
+    }
+    // Optional: Schließen bei Klick auf den Hintergrund
+    window.addEventListener('click', function(e) {
+        var popup = document.getElementById('global-extended-popup');
+        if (popup && popup.classList.contains('active') && e.target === popup) {
+            closeExtendedPopup();
+        }
+    });
+    </script>
 </body>
 
 </html>

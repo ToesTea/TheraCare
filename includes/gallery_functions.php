@@ -265,9 +265,9 @@ function getRandomHeroImage() {
 }
 
 // Add modal for image viewing
-echo '<div id="imageModal" class="modal" onclick="closeModal()">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImage">
-</div>';
+// echo '<div id="imageModal" class="modal" onclick="closeModal()">
+//     <span class="close">&times;</span>
+//     <img class="modal-content" id="modalImage">
+// </div>';
 ?> 
 

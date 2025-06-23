@@ -1,11 +1,11 @@
 /*Bitte arbeitet mit Variablen für ein einheitliches design*/
 :root {
     /* Colors */
-    --primary: #a5b579;
-    --primary-dark: #8a9862;
-    --primary-light: #c4d1a4;
-    --secondary: #2b4c3b;
-    --secondary-light: #3a6550;
+    --primary: #E18EDC;
+    --primary-dark: #A04EDC;
+    --primary-light: #F4B8F0;
+    --secondary: #7C6FE3;
+    --secondary-light: #5F8DEB;
     --background: #f5f7f2;
     --background-light: #ffffff;
     --background-dark: #e8ebe3;
@@ -14,14 +14,14 @@
     --text-muted: #666666;
     --gray-light: #e0e0e0;
     --gray-medium: #999999;
-    --nav-bg: #a5b579;
-    --nav-hover: #8a9862;
-    --footer-bg: #2C3E50;
+    --nav-bg: #A04EDC;
+    --nav-hover: #D06CDA;
+    --footer-bg: #A04EDC;
     --footer-text: #ecf0f1;
-    --accent-1: #d4e157;
-    --accent-2: #7cb342;
-    --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-    --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+    --accent-1: #A5D2F7;
+    --accent-2: #C3F1F9;
+    --gradient-primary: linear-gradient(135deg, #A04EDC 0%, #D06CDA 15%, #E18EDC 35%, #F4B8F0 50%, #7C6FE3 65%, #5F8DEB 80%, #A5D2F7 90%, #C3F1F9 100%);
+    --gradient-secondary: linear-gradient(135deg, #7C6FE3 0%, #5F8DEB 100%);
     
     /* Sizes */
     --container-width: 1200px;
@@ -71,6 +71,8 @@
     --z-navbar: 1000;
     --z-menu-toggle: 2000;
     --z-modal: 3000;
+    --nav-sky-blue: #5F8DEB;
+    --nav: #A5D2F7;
 }
 html{
     scroll-behavior: smooth;
@@ -99,7 +101,7 @@ body {
 .navbar {
     width: 100vw !important;
     height: var(--nav-height);
-    background-color: var(--primary);
+    background: var(--gradient-primary);
     display: flex;
     position: fixed;
     z-index: var(--z-navbar);
@@ -837,10 +839,9 @@ nav *{
 
 /* Footer Styles */
 .footer {
-    background: linear-gradient(135deg, var(--footer-bg) 0%, #1a3528 100%);
-    padding: var(--spacing-lg) 0 var(--spacing-md);
+    background: linear-gradient(135deg, var(--footer-bg) 0%, #e682dd 100%);
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
     margin-top: var(--spacing-xl);
-    color: var(--footer-text);
     position: relative;
     overflow: hidden;
 }
@@ -1691,7 +1692,7 @@ main h1,
 
 /* Footer styles */
 .footer {
-    background: #2b4c3b;
+    background: linear-gradient(135deg, var(--footer-bg) 0%, #e682dd 100%);
     padding: var(--spacing-xl) 0 var(--spacing-lg);
     margin-top: var(--spacing-xl);
     position: relative;

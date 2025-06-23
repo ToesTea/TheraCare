@@ -1,10 +1,10 @@
 :root {
     /* Colors */
-    --primary: #a5b579;
-    --primary-dark: #8a9862;
-    --primary-light: #c4d1a4;
-    --secondary: #2b4c3b;
-    --secondary-light: #3a6550;
+    --primary: #E18EDC; /* Pink (mittig, leuchtend) */
+    --primary-dark: #A04EDC; /* Violett (links unten, kräftig) */
+    --primary-light: #F4B8F0; /* Hellrosa (unten links, aufgehellt) */
+    --secondary: #7C6FE3; /* Blauviolett (zentral, Übergang) */
+    --secondary-light: #5F8DEB; /* Mittelblau (oben rechts, dominant) */
     --background: #f5f7f2;
     --background-light: #ffffff;
     --background-dark: #e8ebe3;
@@ -13,14 +13,14 @@
     --text-muted: #666666;
     --gray-light: #e0e0e0;
     --gray-medium: #999999;
-    --nav-bg: #a5b579;
-    --nav-hover: #8a9862;
+    --nav-bg: #a04edc; /* Violett */
+    --nav-hover: #D06CDA; /* Magenta */
     --footer-bg: #2C3E50;
     --footer-text: #ecf0f1;
-    --accent-1: #d4e157;
-    --accent-2: #7cb342;
-    --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-    --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+    --accent-1: #A5D2F7; /* Hellblau (rechts außen) */
+    --accent-2: #C3F1F9; /* Cyan (unten rechts, sehr hell) */
+    --gradient-primary: linear-gradient(135deg, #A04EDC 0%, #D06CDA 15%, #E18EDC 35%, #F4B8F0 50%, #7C6FE3 65%, #5F8DEB 80%, #A5D2F7 90%, #C3F1F9 100%);
+    --gradient-secondary: linear-gradient(135deg, #7C6FE3 0%, #5F8DEB 100%);
     
     /* Font Sizes */
     --font-size-base: 16px;
@@ -98,22 +98,22 @@
     --main-font-size: 16px;
 
     --text-dark-gray: rgba(46, 46, 46, 1);
-    --background-mint: #a8d5ba;
+    --background-mint: #A04EDC;
     --background-beige: rgb(224, 215, 200, 1);
     --light-gray: #d3d3d3;
-    --olive-green: #6b8e77;
-    --sand: #c5c1a0;
-    --headline-footer-forest: #587b6f;
-    --hover-sage: #a3b18a;
-    --nav-sky-blue: #a7d3f4;
-    --nav: #a3b18a;
+    --olive-green: #D06CDA;
+    --sand: #E18EDC;
+    --headline-footer-forest: #F4B8F0;
+    --hover-sage: #7C6FE3;
+    --nav-sky-blue: #5F8DEB;
+    --nav: #A5D2F7;
 
     --text-dark-gray-rgb: rgba(46, 46, 46, 1);
-    --buttons-mint-rgb: rgba(168, 213, 186, 1);
+    --buttons-mint-rgb: #A04EDC;
     --background-beige-rgb: rgba(245, 241, 227, 1);
     --light-gray-rgb: rgba(211, 211, 211, 1);
-    --olive-green-rgb: rgba(107, 142, 119, 1);
-    --sand-rgb: rgba(197, 193, 160, 1);
-    --headline-footer-forest-rgb: rgba(88, 123, 111, 1);
-    --hover-sage-rgb: rgba(163, 177, 138, 1);
+    --olive-green-rgb: #D06CDA;
+    --sand-rgb: #E18EDC;
+    --headline-footer-forest-rgb: #F4B8F0;
+    --hover-sage-rgb: #7C6FE3;
 }
